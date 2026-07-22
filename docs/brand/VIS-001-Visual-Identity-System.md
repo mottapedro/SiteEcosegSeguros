@@ -6,11 +6,11 @@
 
 **Categoria:** Identidade Visual
 
-**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos, VIS-001.3 (moodboard) e VIS-001.4 (sistema visual) pendentes
+**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos; protocolo de VIS-001.3 definido, pesquisa/validação ainda não realizada; VIS-001.4 (Identity Exploration) pendente
 
-**Versão:** 0.2 (parcial)
+**Versão:** 0.3 (parcial)
 
-Este documento traduz `BD-001` (Brand DNA) e `BD-002` (Brand Architecture) em linguagem visual. Segue a sequência definida: primeiro a linguagem e os princípios (VIS-001.1–2), depois exploração conceitual (VIS-001.3), só então o sistema concreto — símbolo, logotipo, tipografia, paleta (VIS-001.4). Nenhuma decisão de logo/cor é tomada neste documento ainda.
+Este documento traduz `BD-001` (Brand DNA) e `BD-002` (Brand Architecture) em linguagem visual. Segue a sequência definida: primeiro a linguagem e os princípios (VIS-001.1–2), depois exploração conceitual (VIS-001.3), só então a exploração de identidade concreta — símbolo, logotipo, tipografia, paleta (VIS-001.4, "Identity Exploration"). Nenhuma decisão de logo/cor é tomada neste documento ainda.
 
 ---
 
@@ -111,13 +111,93 @@ Esta é uma **hipótese**, não uma decisão de logotipo. Ela deve ser testada e
 
 ---
 
-## Próximos Passos (VIS-001.3–4, pendentes)
+## VIS-001.3 — Moodboard Exploration (Protocolo de Pesquisa)
 
-- **VIS-001.3 — Moodboard Exploration**: três painéis distintos, cada um testando a hipótese da unidade fundamental (§VIS-001.3A.3) contra referências reais:
-  - **Painel A — Institucional**: arquitetura, cartografia, design editorial, sinalização.
-  - **Painel B — Ciência**: mapas geológicos, diagramas, atlas, microscopia, sistemas.
-  - **Painel C — Proteção**: buscar metáforas de proteção que não sejam escudo, cofre ou cadeado.
-- **VIS-001.4 — Sistema Visual**: símbolo, logotipo, tipografia, paleta, iconografia, componentes — só após a hipótese da unidade fundamental ser validada em VIS-001.3. `docs/brand/brand-guidelines.md` será realinhado a partir daqui.
+Diferença fundamental em relação a um moodboard tradicional: a pergunta não é "que estilo gostamos?", mas **"qual linguagem visual comunica corretamente os princípios do VIS-001?"**. O objetivo não é escolher um estilo — é validar ou refutar a hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") contra referências reais. Este documento ainda não contém esse resultado — contém o protocolo pelo qual ele deve ser produzido.
+
+### Painel A — Institucional
+
+**Pergunta:** Como organizações que inspiram confiança representam complexidade sem recorrer a clichês?
+
+**Referências a buscar:** cartografia moderna; wayfinding (sistemas de orientação); design editorial institucional; arquitetura contemporânea; visualização de informação.
+
+**Critérios:** clareza; hierarquia; legibilidade; organização.
+
+### Painel B — Ciência
+
+**Pergunta:** Como a ciência representa contexto?
+
+**Referências a buscar:** cortes geológicos; mapas estratigráficos; microscopia; diagramas científicos; atlas; imagens de ressonância; visualizações de dados. Não procurar IA nem tecnologia — a característica comum buscada é que todas **revelam estruturas invisíveis**, não que pareçam tecnológicas.
+
+**Critérios:** revelação de estrutura; profundidade; precisão.
+
+### Painel C — Proteção
+
+**Pergunta:** Como representar proteção sem representar defesa?
+
+**Evitar:** escudo, cadeado, cofre, guarda-chuva, muralha.
+
+**Referências a buscar:** contenção; estabilidade; equilíbrio; resiliência; envolvimento; preservação.
+
+**Critérios:** ausência de agressividade; calor humano (Guardião, BD-001); não parecer bloqueio passivo (§1.3).
+
+### Matriz de Validação (template — a preencher após pesquisa real)
+
+```text
+VALIDADO / REFUTADO — a preencher com base em referências reais coletadas
+
+[ ] Camadas
+[ ] Núcleo
+[ ] Interseções
+[ ] Contenção
+[ ] Estruturas invisíveis
+
+[ ] Escudos               (esperado: ✗)
+[ ] Redes neurais          (esperado: ✗)
+[ ] Circuitos              (esperado: ✗)
+[ ] Cadeados               (esperado: ✗)
+[ ] Gradientes futuristas  (esperado: ✗)
+```
+
+Este template não deve ser marcado como concluído até que referências visuais reais (coletadas manualmente ou via exploração assistida — ver Apêndice) tenham sido de fato avaliadas contra os critérios de §VIS-001.3A.2.
+
+### Resultado Esperado
+
+Ao final de VIS-001.3, o entregável não é um logotipo — é a matriz acima preenchida, funcionando como filtro para qualquer designer ou proposta futura.
+
+---
+
+## Apêndice — Catálogo de Prompts para Exploração Visual Assistida
+
+Este ambiente não possui uma ferramenta de geração de imagens disponível — os prompts abaixo são para uso em uma ferramenta externa (Midjourney, DALL·E, etc.), mantendo a exploração disciplinada pelos mesmos critérios em vez de prompting aberto. Nenhuma imagem gerada a partir daqui deve ser considerada "validada" sem passar pelos critérios de §VIS-001.3A.2 e pela Matriz de Validação acima.
+
+Direções sugeridas (uma por hipótese/painel):
+
+1. **Núcleo envolvido por camadas contextuais** — testa a hipótese central (§VIS-001.3A.3) diretamente.
+2. **Estruturas geológicas aplicadas à identidade institucional** — testa Painel B (revelar estrutura sem parecer tech).
+3. **Cartografia abstrata como linguagem de proteção** — testa Painel A + C combinados.
+4. **Diagramas científicos minimalistas** — testa Painel B contra o critério de clareza (§1.2).
+5. **Proteção representada por contenção, sem escudos** — testa Painel C diretamente, com o veto explícito.
+
+Cada família de imagens geradas deve ser confrontada com as perguntas de §1.4 antes de entrar na Matriz de Validação — imagens "interessantes" que não respondem a nenhuma pergunta não contam como evidência.
+
+---
+
+## VIS-001.4 — Identity Exploration (anteriormente "Sistema Visual")
+
+Renomeado para deixar claro que, mesmo nesta etapa, ainda estamos explorando alternativas — não fechando um manual definitivo. Só inicia após a hipótese da unidade fundamental ser validada em VIS-001.3.
+
+```
+VIS-001.4
+├── A — Símbolo
+├── B — Logotipo
+├── C — Tipografia
+├── D — Paleta
+├── E — Linguagem gráfica
+└── F — Aplicações
+```
+
+`docs/brand/brand-guidelines.md` será realinhado a partir daqui, substituindo os tokens provisórios atuais.
 
 ---
 
