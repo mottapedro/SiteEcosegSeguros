@@ -100,14 +100,11 @@ Não existia como conceito formal — hoje é tratado apenas via `shadow-sm`/`sh
 
 Já implementado: `--radius: 0.375rem` (6px), com escala derivada (`--radius-sm/md/lg/xl`). Mantido sem alteração — "levemente arredondado, nunca extremo" já é a regra correta para o núcleo: bordas quase retas comunicam solidez (o núcleo não deve parecer frágil ou "fofo"); um radius maior seria apropriado apenas para elementos de camada muito periférica (ex: badges), o que já é o caso (`Badge` usa radius menor via `rounded-md`/`rounded-full` conforme variante do shadcn).
 
-## 7. Motion (novo)
+## 7. Motion
 
-Não formalizado até agora, apesar de `framer-motion` estar instalado desde o início do projeto (Fase 1) e não utilizado.
+Expandido integralmente em **`MOT-001 — Motion Language`** — easings nomeados (`contour-out`, `layer-in`), durações, e especificação de Transitions/Hover/Page Transition/Hero Animation/Scroll Reveal/Loading/Empty States/Microinteractions. Este parágrafo permanece apenas como ponteiro; não duplicar conteúdo aqui.
 
-- **Duração:** 200–300ms para microinterações (hover, foco, abertura de menu) — per Manual de Identidade Visual original.
-- **Regra do Mapa Estratégico do Contexto:** movimento representa **mudança de camada** (revelar um contexto que não estava visível — ex: expandir um card, abrir um accordion), nunca decoração ambiente (sem partículas, sem parallax puramente estético).
-- **Redução de movimento:** já respeitado globalmente (`prefers-reduced-motion`, `globals.css`) — deve se estender a qualquer animação futura via `framer-motion`.
-- **Ausência atual:** nenhum componente hoje usa `framer-motion` — item em aberto, não uma violação (nada errado foi feito, apenas nada foi feito ainda).
+Resumo mínimo: movimento representa mudança de camada ou revelação de contexto, nunca decoração ambiente; nada foi implementado ainda (`framer-motion` instalado, não utilizado) — ver `MOT-001 §12` para o estado real, item por item.
 
 ## 8. Shadow
 
@@ -183,6 +180,7 @@ Itens em aberto:
 - DES-001 — Experience Principles
 - DES-002 — Interaction Language
 - WEB-001 — Information Architecture
+- MOT-001 — Motion Language (expande §7 integralmente)
 - `src/app/globals.css`, `src/components/ui/`, `src/components/layout/`, `src/components/sections/` — implementação atual auditada
 
 ---

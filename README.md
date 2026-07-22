@@ -48,7 +48,7 @@ Ver `docs/`:
 - `brand/` — arquitetura de marca, experiência, informação e design system
   (`BD-001` Brand DNA, `BD-002` Brand Architecture, `VIS-001` Visual Identity System,
   `DES-001` Experience Principles, `DES-002` Interaction Language, `WEB-001`
-  Information Architecture, `DS-001` Design System, `brand-guidelines.md` com os
-  tokens de design derivados dela)
+  Information Architecture, `DS-001` Design System, `MOT-001` Motion Language,
+  `brand-guidelines.md` com os tokens de design derivados dela)
 - `adr/` — decisões de arquitetura
 - `roadmap.md` / `backlog.md` — próximas fases
