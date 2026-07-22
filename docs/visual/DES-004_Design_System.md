@@ -1,8 +1,8 @@
-# DS-001 — Design System
+# DES-004 — Design System
 
 **Marca:** EcoSeg Seguros
 
-**Identificador:** DS-001
+**Identificador:** DES-004
 
 **Categoria:** Design System
 
@@ -10,7 +10,7 @@
 
 **Versão:** 1.0
 
-O primeiro Design System institucional da EcoSeg. Implementa `VIS-001` (linguagem visual), `DES-001`/`DES-002` (princípios de experiência e interação) e a arquitetura de `WEB-001` em tokens e componentes concretos. Todo componente deriva de um único conceito: o **Mapa Estratégico do Contexto** — um núcleo (o que é protegido) envolvido por camadas (o contexto que o cerca e, quando compreendido, o protege).
+O primeiro Design System institucional da EcoSeg. Implementa `VIS-001` (linguagem visual), `DES-001`/`DES-003` (princípios de experiência e interação) e a arquitetura de `DES-002` em tokens e componentes concretos. Todo componente deriva de um único conceito: o **Mapa Estratégico do Contexto** — um núcleo (o que é protegido) envolvido por camadas (o contexto que o cerca e, quando compreendido, o protege).
 
 ---
 
@@ -18,7 +18,7 @@ O primeiro Design System institucional da EcoSeg. Implementa `VIS-001` (linguage
 
 `VIS-001` estabeleceu que VIS-001.4 (exploração de identidade concreta) só deveria começar **após** a hipótese da unidade fundamental ("núcleo protegido por camadas de contexto") ser validada em VIS-001.3 — pesquisa visual real contra o protocolo de três painéis definido lá. Essa pesquisa não foi realizada; a Matriz de Validação em `VIS-001` permanece como template vazio.
 
-Este documento (DS-001) avança para tokens e componentes concretos **por decisão explícita**, não porque a pesquisa foi concluída. A decisão: adotar "Mapa Estratégico do Contexto" como o conceito unificador de todo o Design System, resolvendo o gate de VIS-001.3 por deliberação direta em vez de validação empírica. Isso é registrado aqui, e deve ser refletido em `VIS-001` (ver seção final deste documento), para que ninguém leia `VIS-001` no futuro e presuma que a pesquisa aconteceu.
+Este documento (DES-004) avança para tokens e componentes concretos **por decisão explícita**, não porque a pesquisa foi concluída. A decisão: adotar "Mapa Estratégico do Contexto" como o conceito unificador de todo o Design System, resolvendo o gate de VIS-001.3 por deliberação direta em vez de validação empírica. Isso é registrado aqui, e deve ser refletido em `VIS-001` (ver seção final deste documento), para que ninguém leia `VIS-001` no futuro e presuma que a pesquisa aconteceu.
 
 **Consequência prática:** os tokens de cor abaixo não são novos — são os já implementados em `src/app/globals.css` (auditados e mantidos, pois já derivam do Manual de Identidade Visual e não contradizem a hipótese adotada). Os tokens de spacing/grid são formalização do que já está em uso informal no código. Elevation, Motion e os componentes Timeline são novos.
 
@@ -102,9 +102,9 @@ Já implementado: `--radius: 0.375rem` (6px), com escala derivada (`--radius-sm/
 
 ## 7. Motion
 
-Expandido integralmente em **`MOT-001 — Motion Language`** — easings nomeados (`contour-out`, `layer-in`), durações, e especificação de Transitions/Hover/Page Transition/Hero Animation/Scroll Reveal/Loading/Empty States/Microinteractions. Este parágrafo permanece apenas como ponteiro; não duplicar conteúdo aqui.
+Expandido integralmente em **`DES-005 — Motion Language`** — easings nomeados (`contour-out`, `layer-in`), durações, e especificação de Transitions/Hover/Page Transition/Hero Animation/Scroll Reveal/Loading/Empty States/Microinteractions. Este parágrafo permanece apenas como ponteiro; não duplicar conteúdo aqui.
 
-Resumo mínimo: movimento representa mudança de camada ou revelação de contexto, nunca decoração ambiente; nada foi implementado ainda (`framer-motion` instalado, não utilizado) — ver `MOT-001 §12` para o estado real, item por item.
+Resumo mínimo: movimento representa mudança de camada ou revelação de contexto, nunca decoração ambiente; nada foi implementado ainda (`framer-motion` instalado, não utilizado) — ver `DES-005 §12` para o estado real, item por item.
 
 ## 8. Shadow
 
@@ -132,7 +132,7 @@ Cada componente é descrito pela camada do Mapa Estratégico do Contexto que ele
 
 **Papel no Mapa:** um formulário é o instrumento de mapeamento — cada campo é uma camada de contexto sendo coletada (nome → contato → assunto → mensagem, do mais genérico ao mais específico). Já implementado (`contact-form.tsx`) na ordem correta: identificação → contato → contexto (assunto) → detalhe (mensagem).
 
-**Regra nova, per `DES-002 §4`:** quando o formulário evoluir (Fase 2+) para capturar mais contexto (ex: um diagnóstico de múltiplas etapas), cada etapa deve corresponder a uma camada do Mapa, exibida visualmente (ex: indicador de progresso "Camada 2 de 4"), não apenas a uma barra de progresso genérica.
+**Regra nova, per `DES-003 §4`:** quando o formulário evoluir (Fase 2+) para capturar mais contexto (ex: um diagnóstico de múltiplas etapas), cada etapa deve corresponder a uma camada do Mapa, exibida visualmente (ex: indicador de progresso "Camada 2 de 4"), não apenas a uma barra de progresso genérica.
 
 ### Navbar
 
@@ -144,17 +144,17 @@ Cada componente é descrito pela camada do Mapa Estratégico do Contexto que ele
 
 ### Timeline (novo — não implementado)
 
-**Papel no Mapa:** representa a camada **Tempo** do glossário de `VIS-001 §VIS-001.3A.1` (Tempo → evolução). Não existe hoje no código. Casos de uso futuros: histórico da empresa (`Quem Somos`, per `WEB-001`), jornada do cliente (`Metodologia`, per `WEB-001`), evolução de um sinistro (fora do escopo atual).
+**Papel no Mapa:** representa a camada **Tempo** do glossário de `VIS-001 §VIS-001.3A.1` (Tempo → evolução). Não existe hoje no código. Casos de uso futuros: histórico da empresa (`Quem Somos`, per `DES-002`), jornada do cliente (`Metodologia`, per `DES-002`), evolução de um sinistro (fora do escopo atual).
 
 **Especificação inicial (para implementação futura):**
 
 - Linha vertical ou horizontal fina (`border-border`), nunca uma barra grossa — a linha é o "fio de contexto", não um elemento decorativo.
 - Cada ponto da timeline é um núcleo pequeno (círculo preenchido com `--accent` para o ponto atual/mais recente, `--muted-foreground` para pontos passados).
-- Texto de cada ponto segue `DES-002 §2` (tom de voz) — nunca "conquistas" em tom de marketing, sempre fatos verificáveis com data.
+- Texto de cada ponto segue `DES-003 §2` (tom de voz) — nunca "conquistas" em tom de marketing, sempre fatos verificáveis com data.
 
 ### Section Layout
 
-**Papel no Mapa:** cada seção da página é uma camada visitável do Mapa Estratégico do Contexto, na ordem definida por `WEB-001` (Home) e pela Progress Protection Philosophy (`DES-001 §2`). Já implementado via o componente `Section` (`src/components/sections/section.tsx`): container `max-w-7xl`, padding vertical `py-20 sm:py-24`, variante `tone="muted"` para alternância visual entre camadas.
+**Papel no Mapa:** cada seção da página é uma camada visitável do Mapa Estratégico do Contexto, na ordem definida por `DES-002` (Home) e pela Progress Protection Philosophy (`DES-001 §2`). Já implementado via o componente `Section` (`src/components/sections/section.tsx`): container `max-w-7xl`, padding vertical `py-20 sm:py-24`, variante `tone="muted"` para alternância visual entre camadas.
 
 **Regra nova:** a alternância `tone="default"`/`tone="muted"` entre seções consecutivas deve refletir a alternância entre camadas do Mapa (ex: uma seção "muted" representa uma camada de contexto de apoio; uma seção "default" representa o núcleo/produto em foco) — não deve ser apenas alternância estética por variedade visual.
 
@@ -162,25 +162,25 @@ Cada componente é descrito pela camada do Mapa Estratégico do Contexto que ele
 
 ## Rastreabilidade
 
-Depende de: `VIS-001` (hipótese da unidade fundamental, adotada por decisão — ver Nota de Governança), `DES-001`, `DES-002`, `WEB-001`.
+Depende de: `VIS-001` (hipótese da unidade fundamental, adotada por decisão — ver Nota de Governança), `DES-001`, `DES-003`, `DES-002`.
 
-Afeta: `src/app/globals.css` (nenhuma mudança de valor, apenas documentação de significado), `docs/brand/brand-guidelines.md` (deve ser atualizado para referenciar este documento como fonte de verdade dos tokens), `docs/brand/VIS-001-Visual-Identity-System.md` (deve registrar que VIS-001.3 foi superseded por decisão, não concluído por pesquisa — ver abaixo).
+Afeta: `src/app/globals.css` (nenhuma mudança de valor, apenas documentação de significado), `docs/brand/brand-guidelines.md` (deve ser atualizado para referenciar este documento como fonte de verdade dos tokens), `docs/visual/VIS-001_Visual_Identity_System.md` (deve registrar que VIS-001.3 foi superseded por decisão, não concluído por pesquisa — ver abaixo).
 
 **Ação pendente neste mesmo commit:** atualizar `VIS-001` para refletir que sua hipótese foi adotada por decisão (este documento) em vez de validada por pesquisa, per `CAO-029`-like princípio de memória institucional (não deixar essa mudança de status implícita apenas neste documento).
 
 Itens em aberto:
 
 - Motion (§7): nenhum componente usa `framer-motion` hoje — ausência registrada, não implementada.
-- Timeline (componente): especificado, não implementado — nenhuma página do site atual precisa dele ainda (`Quem Somos`/`Metodologia` não existem, per `WEB-001`).
+- Timeline (componente): especificado, não implementado — nenhuma página do site atual precisa dele ainda (`Quem Somos`/`Metodologia` não existem, per `DES-002`).
 - `docs/brand/brand-guidelines.md` ainda não atualizado para apontar para este documento (fazer em commit próprio, não misturado a este).
 
 ## Referências
 
 - VIS-001 — Visual Identity System
 - DES-001 — Experience Principles
-- DES-002 — Interaction Language
-- WEB-001 — Information Architecture
-- MOT-001 — Motion Language (expande §7 integralmente)
+- DES-003 — Interaction Language
+- DES-002 — Information Architecture
+- DES-005 — Motion Language (expande §7 integralmente)
 - `src/app/globals.css`, `src/components/ui/`, `src/components/layout/`, `src/components/sections/` — implementação atual auditada
 
 ---

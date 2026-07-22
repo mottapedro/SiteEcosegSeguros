@@ -1,8 +1,8 @@
-# MOT-001 — Motion Language
+# DES-005 — Motion Language
 
 **Marca:** EcoSeg Seguros
 
-**Identificador:** MOT-001
+**Identificador:** DES-005
 
 **Categoria:** Design System / Movimento
 
@@ -10,7 +10,7 @@
 
 **Versão:** 1.0
 
-Este documento expande `DS-001 §7` (Motion) em uma linguagem de animação completa. Nenhuma animação decorativa é permitida — toda animação deve comunicar **Leitura, Descoberta, Compreensão, Fluxo ou Contexto**. Se um movimento não comunica um destes cinco, ele não deve existir, independente de quão "polido" pareça.
+Este documento expande `DES-004 §7` (Motion) em uma linguagem de animação completa. Nenhuma animação decorativa é permitida — toda animação deve comunicar **Leitura, Descoberta, Compreensão, Fluxo ou Contexto**. Se um movimento não comunica um destes cinco, ele não deve existir, independente de quão "polido" pareça.
 
 ---
 
@@ -27,7 +27,7 @@ A referência de movimento não é a interface de um app de tecnologia — é a 
 
 ## 2. Easings Nomeados (tokens)
 
-Complementa `DS-001 §7`. Dois easings cobrem todo o sistema — não introduzir um terceiro sem justificativa equivalente:
+Complementa `DES-004 §7`. Dois easings cobrem todo o sistema — não introduzir um terceiro sem justificativa equivalente:
 
 - **`contour-out`** — `cubic-bezier(0.22, 1, 0.36, 1)`. Uso: revelação, expansão, entrada de conteúdo. Desaceleração longa e suave, como uma linha de contorno se assentando. É o easing padrão para tudo que "aparece".
 - **`layer-in`** — `cubic-bezier(0.4, 0, 0.2, 1)`. Uso: transição entre camadas de profundidade (hover com elevação, abertura de menu, troca de estado). Mais simétrico, mais rápido — comunica mudança de camada, não chegada de conteúdo novo.
@@ -49,15 +49,15 @@ Toda transição de estado (cor, opacidade, transform) segue os easings de §2. 
 
 ## 5. Page Transition
 
-Representa mudança de camada de contexto (uma página é uma camada do Mapa Estratégico do Contexto, per `DS-001`). Especificação:
+Representa mudança de camada de contexto (uma página é uma camada do Mapa Estratégico do Contexto, per `DES-004`). Especificação:
 
 - Saída: conteúdo atual recua ligeiramente (translateY ou opacity, nunca ambos com zoom) com `layer-in`, 200ms.
 - Entrada: conteúdo novo usa `contour-out`, 300–400ms, com um leve atraso (~50ms) após a saída — nunca crossfade simultâneo, que comunicaria as duas páginas como a mesma camada.
-- Não implementado — o site hoje não tem transição de página customizada (Next.js App Router, navegação padrão). Candidato a implementação futura com `framer-motion` (já instalado, não utilizado — per `DS-001 §7`).
+- Não implementado — o site hoje não tem transição de página customizada (Next.js App Router, navegação padrão). Candidato a implementação futura com `framer-motion` (já instalado, não utilizado — per `DES-004 §7`).
 
 ## 6. Hero Animation
 
-O Hero representa a etapa "Adversidades" comprimida (`DES-001 §2`, `WEB-001`). A animação de entrada deve comunicar **descoberta progressiva**, não impacto:
+O Hero representa a etapa "Adversidades" comprimida (`DES-001 §2`, `DES-002`). A animação de entrada deve comunicar **descoberta progressiva**, não impacto:
 
 1. Eyebrow (rótulo, ex: "Consultoria em seguros corporativos") aparece primeiro — `contour-out`, 300ms.
 2. Título principal aparece em seguida (~80ms depois) — mesmo easing, ligeiramente mais longo (400ms) por ser o elemento mais importante.
@@ -70,7 +70,7 @@ Nenhum elemento deve usar fade-in puro sem movimento de posição — per o voca
 
 Aplica diretamente a metáfora de leitura de mapa: conteúdo é revelado à medida que entra na área de leitura, em sequência, nunca todo de uma vez.
 
-- Cada seção (`Section`, per `DS-001`) revela seu conteúdo com stagger (atraso escalonado) entre elementos-irmãos: 40–60ms entre cards de uma grade (Produtos, Diferenciais, Depoimentos).
+- Cada seção (`Section`, per `DES-004`) revela seu conteúdo com stagger (atraso escalonado) entre elementos-irmãos: 40–60ms entre cards de uma grade (Produtos, Diferenciais, Depoimentos).
 - Movimento: opacity 0→1 + translateY de 12–16px, `contour-out`, disparado quando o elemento entra ~15% na viewport (não espera o elemento inteiro estar visível — o mapa começa a ser lido antes de estar todo à mostra).
 - Uma seção nunca deve re-animar ao rolar para cima e para baixo repetidamente — a revelação acontece uma vez por sessão de leitura (usar `once: true` em qualquer implementação com `framer-motion`).
 - Respeita `prefers-reduced-motion` globalmente (já implementado em `globals.css` para transições CSS; qualquer scroll reveal via `framer-motion` deve checar `useReducedMotion()` e desabilitar o translateY, mantendo apenas a mudança de opacidade instantânea).
@@ -81,21 +81,21 @@ Não deve usar um spinner genérico (círculo girando) nem pontos saltitantes (b
 
 **Especificação:** um traço fino se desenhando (stroke-dasharray animado) — literalmente uma linha de contorno sendo traçada, reforçando o vocabulário topográfico. Onde isso não for viável (ex: dentro de um botão pequeno), usar um indicador simples de opacidade pulsante lenta (0.5↔1, 1000ms, linear — a única exceção ao uso de `contour-out`/`layer-in`, pois um estado de espera contínuo não é uma revelação nem uma mudança de camada, é a ausência de progresso visível).
 
-**Estado atual:** o botão de envio do formulário já comunica loading via texto ("Enviando...", per `DES-002 §3`) sem animação visual adicional — aceitável como está; a especificação acima aplica-se a loadings mais longos ou de página inteira, que ainda não existem no site.
+**Estado atual:** o botão de envio do formulário já comunica loading via texto ("Enviando...", per `DES-003 §3`) sem animação visual adicional — aceitável como está; a especificação acima aplica-se a loadings mais longos ou de página inteira, que ainda não existem no site.
 
 ## 9. Empty States
 
 Representa "contexto ainda não mapeado" — nunca deve comunicar erro ou vazio genérico ("Nada encontrado").
 
-**Especificação:** ilustração ou composição visual mostrando camadas incompletas/em contorno (consistente com `VIS-001 §1.3`, "contenção sem enclausuramento" — um empty state não é um beco sem saída, é um convite a preencher o contexto). Texto segue `DES-002` (tom calmo, próximo passo claro — nunca "Ops! Nada aqui ainda 😅").
+**Especificação:** ilustração ou composição visual mostrando camadas incompletas/em contorno (consistente com `VIS-001 §1.3`, "contenção sem enclausuramento" — um empty state não é um beco sem saída, é um convite a preencher o contexto). Texto segue `DES-003` (tom calmo, próximo passo claro — nunca "Ops! Nada aqui ainda 😅").
 
-**Estado atual:** não existe nenhum empty state implementado no site hoje (não há listagens dinâmicas na Fase 1) — esta seção é especificação para o Blog/Conteúdos (`WEB-001`) e futuros painéis (Portal do Cliente), quando existirem.
+**Estado atual:** não existe nenhum empty state implementado no site hoje (não há listagens dinâmicas na Fase 1) — esta seção é especificação para o Blog/Conteúdos (`DES-002`) e futuros painéis (Portal do Cliente), quando existirem.
 
 ## 10. Microinteractions
 
 - **Hover de botão:** já implementado via mudança de cor (`hover:bg-primary/80`, etc.) — alinhado ao vocabulário se tratado como mudança de camada (§2, `layer-in`); duração deve ser explicitada (§4, ação pendente).
 - **Press de botão:** já implementado (`active:translate-y-px`) — um "afundar" sutil de 1px comunica contato físico direto, consistente com "camadas" (o botão desce uma camada ao ser pressionado). Manter.
-- **WhatsApp float (hover:scale-105):** parcialmente alinhado — escala sozinha é mais genérica/decorativa do que uma elevação. Recomendação: complementar com aumento de `shadow` (per `DS-001 §5`, Elevation) em vez de depender só de scale, para que o hover comunique "esta camada sobe", não apenas "este elemento cresce".
+- **WhatsApp float (hover:scale-105):** parcialmente alinhado — escala sozinha é mais genérica/decorativa do que uma elevação. Recomendação: complementar com aumento de `shadow` (per `DES-004 §5`, Elevation) em vez de depender só de scale, para que o hover comunique "esta camada sobe", não apenas "este elemento cresce".
 - **Foco de campo de formulário:** já implementado via `ring` (shadcn) — alinhado, comunica claramente qual camada de contexto está sendo preenchida no momento.
 
 ---
@@ -103,7 +103,7 @@ Representa "contexto ainda não mapeado" — nunca deve comunicar erro ou vazio 
 ## 11. Regras Proibidas (explícitas)
 
 - Parallax puramente decorativo (fundo se move em velocidade diferente do conteúdo sem razão de leitura).
-- Partículas, confete, ou qualquer efeito "celebratório" (já vetado em `DES-002 §8` para mensagens de sucesso — reforçado aqui para animação).
+- Partículas, confete, ou qualquer efeito "celebratório" (já vetado em `DES-003 §8` para mensagens de sucesso — reforçado aqui para animação).
 - Bounce/spring com overshoot visível.
 - Autoplay de carrossel ou qualquer movimento contínuo sem interação do usuário (contradiz "leitura", que é sempre no ritmo de quem lê).
 - Hover que muda o layout (deslocamento de outros elementos) — hover é camada, não reflow.
@@ -116,9 +116,9 @@ Este documento é **especificação**, não implementação. Nenhum destes compo
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Easings nomeados (`contour-out`, `layer-in`) | Não implementados como tokens Tailwind/CSS — hoje `transition-all` sem easing explícito                         |
 | Hero Animation                               | Não implementado — Hero renderiza estático                                                                      |
-| Scroll Reveal                                | Não implementado — nenhuma seção usa `framer-motion` (instalado, não utilizado, per `DS-001 §7`)                |
+| Scroll Reveal                                | Não implementado — nenhuma seção usa `framer-motion` (instalado, não utilizado, per `DES-004 §7`)               |
 | Page Transition                              | Não implementado                                                                                                |
-| Loading (traço se desenhando)                | Não implementado — apenas texto de loading no botão (`DES-002 §3`), suficiente para o caso de uso atual         |
+| Loading (traço se desenhando)                | Não implementado — apenas texto de loading no botão (`DES-003 §3`), suficiente para o caso de uso atual         |
 | Empty States                                 | Não aplicável ainda — nenhuma listagem dinâmica existe na Fase 1                                                |
 | Microinteractions (hover/press/foco)         | Parcialmente implementadas (ver §10) — funcionais, mas sem duração/easing explícitos alinhados a este documento |
 
@@ -126,7 +126,7 @@ Este documento é **especificação**, não implementação. Nenhum destes compo
 
 ## Rastreabilidade
 
-Depende de: `DS-001 §7` (Motion, expandido por este documento), `VIS-001` (vocabulário visual — camadas, contenção sem enclausuramento), `DES-001`/`DES-002` (calma, ausência de urgência, aplicada aqui ao movimento).
+Depende de: `DES-004 §7` (Motion, expandido por este documento), `VIS-001` (vocabulário visual — camadas, contenção sem enclausuramento), `DES-001`/`DES-003` (calma, ausência de urgência, aplicada aqui ao movimento).
 
 Afeta: qualquer implementação futura de animação em `src/components/`; `src/components/ui/button.tsx` (duração/easing explícitos, recomendado); `src/components/layout/whatsapp-float.tsx` (recomendação de elevação em vez de scale puro).
 
@@ -137,10 +137,10 @@ Itens em aberto:
 
 ## Referências
 
-- DS-001 — Design System (§5 Elevation, §7 Motion)
+- DES-004 — Design System (§5 Elevation, §7 Motion)
 - VIS-001 — Visual Identity System
 - DES-001 — Experience Principles
-- DES-002 — Interaction Language
+- DES-003 — Interaction Language
 - `src/components/ui/button.tsx`, `src/components/layout/whatsapp-float.tsx` — implementação atual auditada
 
 ---

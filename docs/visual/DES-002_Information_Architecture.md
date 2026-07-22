@@ -1,8 +1,8 @@
-# WEB-001 — Information Architecture
+# DES-002 — Information Architecture
 
 **Marca:** EcoSeg Seguros
 
-**Identificador:** WEB-001
+**Identificador:** DES-002
 
 **Categoria:** Arquitetura de Informação
 
@@ -75,7 +75,7 @@ Nenhuma seção de Nível 1 deve ter mais de um nível de profundidade adicional
 
 ### Home
 
-**Razão arquitetural:** a Home não é uma introdução — é a Progress Protection Philosophy inteira, comprimida em uma página, na ordem exata (Adversidades → Mapa → Compreensão → Decisão → Proteção → Progresso). Isso já está parcialmente implementado (Hero → Produtos → Diferenciais → Parceiros → Depoimentos → CTA → Contato, ver `docs/sitemap.md`) e deve ser revisado para refletir a sequência com mais precisão. **Especificação completa, capítulo a capítulo, em `WEB-002 — Home Narrative Design`** — incluindo a reconciliação exata entre a ordem atual do código e a ordem narrativa correta.
+**Razão arquitetural:** a Home não é uma introdução — é a Progress Protection Philosophy inteira, comprimida em uma página, na ordem exata (Adversidades → Mapa → Compreensão → Decisão → Proteção → Progresso). Isso já está parcialmente implementado (Hero → Produtos → Diferenciais → Parceiros → Depoimentos → CTA → Contato, ver `docs/sitemap.md`) e deve ser revisado para refletir a sequência com mais precisão. **Especificação completa, capítulo a capítulo, em `DES-007 — Home Narrative Design`** — incluindo a reconciliação exata entre a ordem atual do código e a ordem narrativa correta.
 
 **Conteúdo esperado:** Hero (nomeia a adversidade + promete compreensão antes de venda), prévia de Segmentos (o visitante se reconhece), prévia de Soluções, prova social (Depoimentos — evidência de Progresso alcançado por outros), CTA para Mapa Estratégico do Contexto ou Contato.
 
@@ -195,7 +195,7 @@ Itens em aberto:
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification
 - VIS-001 — Visual Identity System
-- WEB-002 — Home Narrative Design (especificação completa da Home, capítulo a capítulo)
+- DES-007 — Home Narrative Design (especificação completa da Home, capítulo a capítulo)
 - `docs/roadmap.md`, `docs/sitemap.md` — estado atual de implementação
 
 ---

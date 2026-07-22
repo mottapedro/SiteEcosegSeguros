@@ -6,7 +6,7 @@
 
 **Categoria:** Identidade Visual
 
-**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos; protocolo de VIS-001.3 definido, mas **superseded por decisão em `DS-001`** antes de ser executado como pesquisa (ver nota abaixo); VIS-001.4 iniciado em `DS-001`
+**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos; protocolo de VIS-001.3 definido, mas **superseded por decisão em `DES-004`** antes de ser executado como pesquisa (ver nota abaixo); VIS-001.4 iniciado em `DES-004`
 
 **Versão:** 0.3 (parcial)
 
@@ -109,7 +109,7 @@ Pergunta central antes de qualquer símbolo: **qual é a unidade fundamental que
 
 Esta é uma **hipótese**, não uma decisão de logotipo. Ela deveria ter sido testada e validada (ou refutada) durante VIS-001.3 — se confirmada, orienta logotipo, iconografia e a linguagem gráfica do site; se refutada, VIS-001.3A precisaria ser revisitado antes de prosseguir para VIS-001.4.
 
-**Atualização:** essa validação empírica não ocorreu. Em vez disso, `DS-001 — Design System` adotou esta hipótese ("núcleo protegido por camadas de contexto", rebatizado ali de "Mapa Estratégico do Contexto") **por decisão direta**, resolvendo o gate de VIS-001.3 sem pesquisa. Isso está registrado formalmente na "Nota de Governança" de `DS-001`. Qualquer leitura futura deste documento deve saber: a hipótese está em uso em produção (tokens, componentes), mas nunca foi refutada nem confirmada por evidência visual real — apenas adotada.
+**Atualização:** essa validação empírica não ocorreu. Em vez disso, `DES-004 — Design System` adotou esta hipótese ("núcleo protegido por camadas de contexto", rebatizado ali de "Mapa Estratégico do Contexto") **por decisão direta**, resolvendo o gate de VIS-001.3 sem pesquisa. Isso está registrado formalmente na "Nota de Governança" de `DES-004`. Qualquer leitura futura deste documento deve saber: a hipótese está em uso em produção (tokens, componentes), mas nunca foi refutada nem confirmada por evidência visual real — apenas adotada.
 
 ---
 
@@ -199,7 +199,7 @@ VIS-001.4
 └── F — Aplicações
 ```
 
-**Status real (atualizado):** iniciado em `DS-001 — Design System` (D — Paleta, auditoria sem mudança de valores; também formaliza Spacing/Grid/Elevation/Motion, não previstos originalmente aqui) e em `MOT-001 — Motion Language` (expansão do Motion de `DS-001`) e `VIS-002 — Visual Language System` (E — Linguagem gráfica: patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas). A, B (Símbolo, Logotipo) permanecem não iniciados. `docs/brand/brand-guidelines.md` ainda não foi realinhado — ação pendente, não realizada neste documento.
+**Status real (atualizado):** iniciado em `DES-004 — Design System` (D — Paleta, auditoria sem mudança de valores; também formaliza Spacing/Grid/Elevation/Motion, não previstos originalmente aqui) e em `DES-005 — Motion Language` (expansão do Motion de `DES-004`) e `DES-006 — Visual Language System` (E — Linguagem gráfica: patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas). A, B (Símbolo, Logotipo) permanecem não iniciados. `docs/brand/brand-guidelines.md` ainda não foi realinhado — ação pendente, não realizada neste documento.
 
 ---
 
@@ -212,18 +212,18 @@ Afeta: futuro `docs/brand/brand-guidelines.md` (tokens atuais são provisórios,
 Itens em aberto:
 
 - ~~Reconciliação de "Engenharia de Contexto"~~ — resolvida em `BD-003 §8`/`§9`.
-- Hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") — **adotada por decisão em `DS-001`, nunca validada nem refutada por pesquisa visual real**. VIS-001.3 (protocolo definido em §VIS-001.3 abaixo) não foi executado.
-- Símbolo e Logotipo (VIS-001.4 A/B) — não iniciados; `DS-001` cobriu paleta/tipografia/tokens, não identidade gráfica própria.
-- `docs/brand/brand-guidelines.md` — ainda não atualizado para refletir `DS-001` como fonte de verdade.
+- Hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") — **adotada por decisão em `DES-004`, nunca validada nem refutada por pesquisa visual real**. VIS-001.3 (protocolo definido em §VIS-001.3 abaixo) não foi executado.
+- Símbolo e Logotipo (VIS-001.4 A/B) — não iniciados; `DES-004` cobriu paleta/tipografia/tokens, não identidade gráfica própria.
+- `docs/brand/brand-guidelines.md` — ainda não atualizado para refletir `DES-004` como fonte de verdade.
 
 ## Referências
 
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification
 - BD-003 — Progress Protection Philosophy (resolve formalmente a Nota de Reconciliação acima)
-- DS-001 — Design System (adota a hipótese deste documento por decisão; ver §Status real)
-- MOT-001 — Motion Language
-- VIS-002 — Visual Language System (patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas)
+- DES-004 — Design System (adota a hipótese deste documento por decisão; ver §Status real)
+- DES-005 — Motion Language
+- DES-006 — Visual Language System (patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas)
 - `docs/brand/brand-guidelines.md`
 
 ---

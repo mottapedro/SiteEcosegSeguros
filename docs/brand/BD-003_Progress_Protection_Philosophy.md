@@ -10,7 +10,7 @@
 
 **Versão:** 1.0
 
-The Progress Protection Philosophy is not a marketing concept. It is the operating philosophy of EcoSeg — the reasoning that precedes every product, every recommendation, and every line of communication the institution produces. It has governed `DES-001` (Experience Principles), `WEB-001`/`WEB-002` (information architecture and the Home narrative), and `VIS-002`/`MOT-001` (visual and motion language) since before it had a name. This document gives it one, and states it as institutional doctrine.
+The Progress Protection Philosophy is not a marketing concept. It is the operating philosophy of EcoSeg — the reasoning that precedes every product, every recommendation, and every line of communication the institution produces. It has governed `DES-001` (Experience Principles), `DES-002`/`DES-007` (information architecture and the Home narrative), and `DES-006`/`DES-005` (visual and motion language) since before it had a name. This document gives it one, and states it as institutional doctrine.
 
 ---
 
@@ -115,7 +115,7 @@ This is the Progress Protection Philosophy. It does not change by product line, 
 
 Depende de: `BD-001` (Brand DNA — pilares e invariantes que esta filosofia formaliza em modelo executivo), `BD-002` (Brand Architecture — posicionamento e princípios de comunicação já consistentes com este documento).
 
-Autoritativo para: `DES-001` (a Progress Protection Philosophy citada em `DES-001 §2` tem, a partir deste documento, sua fonte formal — `DES-001` deve ser atualizado para referenciar `BD-003` como origem, não apenas descrever o fluxo), `WEB-001`/`WEB-002` (arquitetura de informação e narrativa da Home, ambos já derivados desta filosofia antes dela ter um documento próprio), `VIS-002`/`MOT-001` (linguagem visual e de movimento, ambas fundamentadas na mesma metáfora central — Strategic Context Map).
+Autoritativo para: `DES-001` (a Progress Protection Philosophy citada em `DES-001 §2` tem, a partir deste documento, sua fonte formal — `DES-001` deve ser atualizado para referenciar `BD-003` como origem, não apenas descrever o fluxo), `DES-002`/`DES-007` (arquitetura de informação e narrativa da Home, ambos já derivados desta filosofia antes dela ter um documento próprio), `DES-006`/`DES-005` (linguagem visual e de movimento, ambas fundamentadas na mesma metáfora central — Strategic Context Map).
 
 Resolve formalmente: a tensão registrada em `VIS-001` (Nota de Reconciliação) entre "Engenharia de Contexto" e o posicionamento de seguros de `BD-001`/`BD-002` — ver §8 e §9 acima.
 
@@ -129,7 +129,7 @@ Itens em aberto:
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification
 - DES-001 — Experience Principles (§2, onde a Progress Protection Philosophy foi originalmente descrita, antes deste documento)
-- WEB-001, WEB-002 — arquitetura e narrativa derivadas desta filosofia
+- DES-002, DES-007 — arquitetura e narrativa derivadas desta filosofia
 - VIS-001 — Nota de Reconciliação, resolvida formalmente por este documento
 
 ---
