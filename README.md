@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EcoSeg — Site Institucional
 
-## Getting Started
+A EcoSeg estrutura Blindagem Patrimonial e Responsabilidade Civil sob medida para
+empresas, condomínios, clínicas e profissionais liberais — com consultoria técnica
+do diagnóstico à apólice.
 
-First, run the development server:
+Site institucional/comercial construído em Next.js (App Router), com foco em SEO,
+geração de leads e uma arquitetura preparada para evoluir para uma plataforma
+(Portal do Cliente, Portal do Corretor, cotação online) sem reescrita.
+
+## Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4 + shadcn/ui (`@base-ui/react`)
+- React Hook Form + Zod
+- Resend (envio de e-mail do formulário de contato)
+- pnpm
+
+## Rodando localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para o formulário de contato enviar e-mails, configure `RESEND_API_KEY` em
+`.env.local` (ver `.env.example`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+```bash
+pnpm dev      # servidor de desenvolvimento
+pnpm build    # build de produção
+pnpm lint     # ESLint
+pnpm format   # Prettier
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Documentação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ver `docs/`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `architecture.md` — Clean Architecture aplicada ao projeto
+- `folder-structure.md` — o que vive em cada pasta
+- `sitemap.md` — mapa do site e status de cada rota
+- `components.md` — componentes de UI/layout/seções
+- `brand-guidelines.md` — tokens de marca (paleta, tipografia) derivados do
+  Manual de Identidade Visual da EcoSeg
+- `adr/` — decisões de arquitetura
+- `roadmap.md` / `backlog.md` — próximas fases
