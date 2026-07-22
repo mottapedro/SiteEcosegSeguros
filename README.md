@@ -46,10 +46,11 @@ Ver `docs/`:
 - `sitemap.md` — mapa do site e status de cada rota
 - `components.md` — componentes de UI/layout/seções
 - `brand/` — arquitetura de marca, experiência, informação e design system
-  (`BD-001` Brand DNA, `BD-002` Brand Architecture, `VIS-001` Visual Identity System,
-  `VIS-002` Visual Language System, `DES-001` Experience Principles, `DES-002`
-  Interaction Language, `WEB-001` Information Architecture, `WEB-002` Home Narrative
-  Design, `DS-001` Design System, `MOT-001` Motion Language, `brand-guidelines.md`
-  com os tokens de design derivados dela)
+  (`BD-001` Brand DNA, `BD-002` Brand Architecture, `BD-003` Progress Protection
+  Philosophy, `VIS-001` Visual Identity System, `VIS-002` Visual Language System,
+  `DES-001` Experience Principles, `DES-002` Interaction Language, `WEB-001`
+  Information Architecture, `WEB-002` Home Narrative Design, `DS-001` Design System,
+  `MOT-001` Motion Language, `brand-guidelines.md` com os tokens de design
+  derivados dela)
 - `adr/` — decisões de arquitetura
 - `roadmap.md` / `backlog.md` — próximas fases

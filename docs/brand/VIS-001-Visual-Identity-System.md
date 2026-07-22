@@ -24,7 +24,7 @@ Foi proposto que a EcoSeg "não vende consultoria" e se posiciona via **Engenhar
 
 **Consequência para a linguagem visual:** o sistema visual pode evocar estrutura, relações e contexto mapeado (como uma expressão visual do método de diagnóstico) — mas não deve evocar "tecnologia"/"IA" genérica, nem abandonar a linguagem de proteção/confiança que é o núcleo de BD-001. Ver §1.4 abaixo.
 
-**Item em aberto:** esta reconciliação foi feita para permitir avanço no VIS-001.1 sem bloquear o trabalho; uma explicação mais completa de como "Engenharia de Contexto" deve aparecer na comunicação (se é que deve aparecer publicamente) ainda é devida e não deve ser assumida além do que está registrado aqui.
+**Item resolvido:** a explicação completa desta reconciliação foi formalizada em **`BD-003 — Progress Protection Philosophy`, §8 (Relationship with Insurance) e §9 (Relationship with Consulting)**. Este item deixa de ser aberto — mantido aqui apenas como histórico do raciocínio original.
 
 ---
 
@@ -211,7 +211,7 @@ Afeta: futuro `docs/brand/brand-guidelines.md` (tokens atuais são provisórios,
 
 Itens em aberto:
 
-- Reconciliação de "Engenharia de Contexto" (ver Nota de Reconciliação) — explicação completa ainda devida antes de considerar o tema encerrado.
+- ~~Reconciliação de "Engenharia de Contexto"~~ — resolvida em `BD-003 §8`/`§9`.
 - Hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") — **adotada por decisão em `DS-001`, nunca validada nem refutada por pesquisa visual real**. VIS-001.3 (protocolo definido em §VIS-001.3 abaixo) não foi executado.
 - Símbolo e Logotipo (VIS-001.4 A/B) — não iniciados; `DS-001` cobriu paleta/tipografia/tokens, não identidade gráfica própria.
 - `docs/brand/brand-guidelines.md` — ainda não atualizado para refletir `DS-001` como fonte de verdade.
@@ -220,6 +220,7 @@ Itens em aberto:
 
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification
+- BD-003 — Progress Protection Philosophy (resolve formalmente a Nota de Reconciliação acima)
 - DS-001 — Design System (adota a hipótese deste documento por decisão; ver §Status real)
 - MOT-001 — Motion Language
 - VIS-002 — Visual Language System (patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas)

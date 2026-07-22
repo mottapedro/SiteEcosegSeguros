@@ -22,7 +22,7 @@ Garantir que toda experiência digital da EcoSeg — não apenas o site instituc
 
 ## 2. Experience Philosophy
 
-A **Progress Protection Philosophy** organiza toda experiência em uma sequência única:
+A **Progress Protection Philosophy** — formalizada como doutrina institucional em `BD-003`, fonte de verdade para esta filosofia; o que segue é sua aplicação à experiência digital — organiza toda experiência em uma sequência única:
 
 ```
 Adversidades
@@ -138,6 +138,7 @@ Item em aberto: auditoria do site atual (Fase 1) contra os Success Criteria (§1
 
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification (especialmente §6 e §8)
+- BD-003 — Progress Protection Philosophy (fonte formal desta filosofia)
 - VIS-001 — Visual Identity System
 - Customer Experience Architecture (CXA), documento recebido em 2026-07-21, referenciado em `BD-002 §8`
 
