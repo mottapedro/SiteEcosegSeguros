@@ -84,7 +84,7 @@ Erro nunca é tratado como falha do usuário — é informação para resoluçã
 
 **Estrutura:** o que aconteceu + o que fazer a seguir. Nunca apenas "Erro." ou um código técnico sem explicação.
 
-**Exemplos already alinhados (`contact-form.tsx`):**
+**Exemplo já alinhado (`contact-form.tsx`):**
 
 - "Não foi possível enviar agora. Tente novamente em instantes." — comunica o problema e uma ação clara, sem culpar o usuário, sem alarmismo.
 
