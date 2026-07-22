@@ -6,9 +6,9 @@
 
 **Categoria:** Identidade Visual
 
-**Status:** Em andamento — VIS-001.1 ativo, VIS-001.2–4 pendentes
+**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos, VIS-001.3 (moodboard) e VIS-001.4 (sistema visual) pendentes
 
-**Versão:** 0.1 (parcial)
+**Versão:** 0.2 (parcial)
 
 Este documento traduz `BD-001` (Brand DNA) e `BD-002` (Brand Architecture) em linguagem visual. Segue a sequência definida: primeiro a linguagem e os princípios (VIS-001.1–2), depois exploração conceitual (VIS-001.3), só então o sistema concreto — símbolo, logotipo, tipografia, paleta (VIS-001.4). Nenhuma decisão de logo/cor é tomada neste documento ainda.
 
@@ -38,8 +38,8 @@ Respondendo às perguntas propostas:
 
 - **Precisão ou descoberta?** Ambos, em sequência — descoberta controlada. O diagnóstico (BD-002 §2) é um processo de descoberta guiado por precisão técnica, não exploração aberta.
 - **Científica ou corporativa?** Mais científica que corporativa — evidência e estrutura acima de status e tradição. Mas nunca fria: o Guardião (BD-001) exige calor humano por trás do rigor.
-- **Redes, camadas, fluxos, contextos ou geometrias?** **Camadas e contexto** — um risco raramente é um ponto isolado; é uma rede de relações (patrimônio pessoal ↔ operação da empresa ↔ responsabilidades a terceiros). A linguagem visual deve conseguir mostrar uma coisa protegida _dentro de_ seu contexto, não isolada dele.
-- **O que diferencia visualmente a EcoSeg de uma empresa de tecnologia?** Uma empresa de tecnologia comunica velocidade e inovação abstrata. A EcoSeg comunica **solidez que vem de entendimento completo** — a estrutura visual deve parecer _investigada_, não _gerada_.
+- **Redes, camadas, fluxos, contextos ou geometrias?** **Camadas**, não redes. Uma leitura inicial sugeriu "redes de relações" (abstrata, evoca conexões tipo grafo/tech). Corrigido: o cliente da EcoSeg vive cercado por riscos, legislação, contratos, pessoas, operações e ativos — isso forma **camadas de contexto** em torno de um núcleo (o patrimônio), não uma rede de nós equivalentes. Camadas comunicam profundidade e proximidade ao que é protegido; redes comunicam apenas conexão, sem hierarquia nem centro.
+- **O que diferencia visualmente a EcoSeg de uma empresa de tecnologia?** Uma empresa de tecnologia comunica velocidade e inovação abstrata. A EcoSeg comunica **solidez que vem de entendimento completo** — a estrutura visual deve parecer **investigada, não gerada** (princípio permanente do VIS: toda proposta futura deve ser avaliada por essa distinção).
 
 ### 1.2 Design Principles
 
@@ -65,18 +65,59 @@ Qualquer proposta visual (logotipo, paleta, sistema) deve ser avaliada perguntan
 1. Isso comunica proteção, ou apenas decora a palavra "proteção"?
 2. Isso parece investigado (específico da EcoSeg) ou genérico (poderia ser qualquer seguradora/startup)?
 3. Isso reflete o método de diagnóstico-antes-da-apólice (contexto, camadas, relações) ou é decorativo sem referente?
-4. Isso é claro o suficiente para um síndico de condomínio entender, sem precisar do vocabulário de "Engenharia de Contexto"?
+4. Isso é claro o suficiente para um síndico de condomínio entender, sem precisar do vocabulário de "Engenharia de Contexto"? _(critério permanente — evita que a identidade fique autocentrada)_
 5. Isso contradiz o tom de voz de BD-002 §5 (nunca alarmista, nunca frio/burocrático)?
 
 Uma proposta que falha nos critérios 1, 3 ou 4 deve ser rejeitada antes mesmo de discutir cor ou tipografia.
 
 ---
 
-## Próximos Passos (VIS-001.2–4, pendentes)
+## VIS-001.3A — Semantic Reference Model
 
-- **VIS-001.2 — Design Principles**: os princípios do §1.2 acima já cobrem parte deste escopo; expandir se necessário antes de VIS-001.3.
-- **VIS-001.3 — Moodboards Conceituais**: exploração visual de referências (não estilos a copiar) respondendo às perguntas do §1.1.
-- **VIS-001.4 — Sistema Visual**: símbolo, logotipo, tipografia, paleta, iconografia, componentes — só após 1–3 estarem estáveis. `docs/brand/brand-guidelines.md` será realinhado a partir daqui.
+Etapa intermediária, antes do moodboard: um filtro conceitual para que a exploração visual (VIS-001.3) valide hipóteses em vez de coletar referências "bonitas" sem coerência. A partir daqui, toda imagem de referência é julgada perguntando **"isto representa qual conceito?"**, nunca **"gostei desse estilo"**.
+
+### 1. Glossário — Conceito → Representação
+
+| Conceito     | Representação visual |
+| ------------ | -------------------- |
+| Contexto     | camadas              |
+| Proteção     | contenção            |
+| Investigação | leitura              |
+| Evidência    | marcas               |
+| Diagnóstico  | interseções          |
+| Patrimônio   | núcleo               |
+| Tempo        | evolução             |
+| Risco        | influência           |
+
+Este glossário é provisório — validado ou revisado durante VIS-001.3, não uma decisão final.
+
+### 2. Critérios de Aceitação/Rejeição de Referências Visuais
+
+Uma referência (imagem, estilo, composição) só entra no moodboard (VIS-001.3) se:
+
+1. Corresponder a pelo menos um conceito do glossário acima — não apenas "combinar com a paleta" ou "parecer moderno".
+2. Passar pelos critérios já definidos em §1.4 (investigado vs. genérico, síndico entende, não contradiz o tom de BD-002 §5).
+3. Não pertencer às categorias já vetadas em §1.3 (clichês de seguros ou de tech).
+
+Referências que "parecem certas" mas não mapeiam a nenhum conceito do glossário devem ser descartadas ou usadas para revisar o glossário — nunca aceitas por impressão estética isolada.
+
+### 3. Hipótese para a Unidade Fundamental da EcoSeg
+
+Pergunta central antes de qualquer símbolo: **qual é a unidade fundamental que a marca representa?** — um patrimônio, um contexto, uma camada, uma relação, uma evidência, ou um diagnóstico?
+
+**Hipótese de trabalho:** a unidade fundamental é **um núcleo protegido por camadas de contexto** — não um escudo, não uma rede, não um círculo genérico. A ideia central: compreender o contexto é o que fortalece a proteção do núcleo (o patrimônio, a pessoa, a empresa). Isso conecta diretamente §1.1 (camadas, não redes), §1.2 (hierarquia por contexto) e a Nota de Reconciliação (Engenharia de Contexto como método de diagnóstico, não como estética de tecnologia).
+
+Esta é uma **hipótese**, não uma decisão de logotipo. Ela deve ser testada e validada (ou refutada) durante VIS-001.3 — se confirmada, orienta logotipo, iconografia e a linguagem gráfica do site; se refutada, VIS-001.3A precisa ser revisitado antes de prosseguir para VIS-001.4.
+
+---
+
+## Próximos Passos (VIS-001.3–4, pendentes)
+
+- **VIS-001.3 — Moodboard Exploration**: três painéis distintos, cada um testando a hipótese da unidade fundamental (§VIS-001.3A.3) contra referências reais:
+  - **Painel A — Institucional**: arquitetura, cartografia, design editorial, sinalização.
+  - **Painel B — Ciência**: mapas geológicos, diagramas, atlas, microscopia, sistemas.
+  - **Painel C — Proteção**: buscar metáforas de proteção que não sejam escudo, cofre ou cadeado.
+- **VIS-001.4 — Sistema Visual**: símbolo, logotipo, tipografia, paleta, iconografia, componentes — só após a hipótese da unidade fundamental ser validada em VIS-001.3. `docs/brand/brand-guidelines.md` será realinhado a partir daqui.
 
 ---
 
@@ -84,9 +125,12 @@ Uma proposta que falha nos critérios 1, 3 ou 4 deve ser rejeitada antes mesmo d
 
 Depende de: `BD-001` (Brand DNA), `BD-002` (Brand Architecture, especialmente §2 Positioning, §5 Voice & Tone, §7 Visual Principles).
 
-Afeta: futuro `docs/brand/brand-guidelines.md` (tokens atuais são provisórios, derivados diretamente do Manual de Identidade Visual recebido — serão substituídos quando VIS-001.4 concluir); qualquer refinamento futuro do frontend do site.
+Afeta: futuro `docs/brand/brand-guidelines.md` (tokens atuais são provisórios, derivados diretamente do Manual de Identidade Visual recebido — serão substituídos quando VIS-001.4 concluir); VIS-001.3 (Moodboard Exploration, testa a hipótese da unidade fundamental de §VIS-001.3A.3); qualquer refinamento futuro do frontend do site.
 
-Item em aberto: reconciliação de "Engenharia de Contexto" (ver Nota de Reconciliação) — explicação completa ainda devida antes de considerar o tema encerrado.
+Itens em aberto:
+
+- Reconciliação de "Engenharia de Contexto" (ver Nota de Reconciliação) — explicação completa ainda devida antes de considerar o tema encerrado.
+- Hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") — não validada; depende do resultado de VIS-001.3.
 
 ## Referências
 
