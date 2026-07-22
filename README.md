@@ -45,9 +45,10 @@ Ver `docs/`:
 - `folder-structure.md` — o que vive em cada pasta
 - `sitemap.md` — mapa do site e status de cada rota
 - `components.md` — componentes de UI/layout/seções
-- `brand/` — arquitetura de marca, experiência e informação (`BD-001` Brand DNA,
-  `BD-002` Brand Architecture, `VIS-001` Visual Identity System, `DES-001` Experience
-  Principles, `DES-002` Interaction Language, `WEB-001` Information Architecture,
-  `brand-guidelines.md` com os tokens de design derivados dela)
+- `brand/` — arquitetura de marca, experiência, informação e design system
+  (`BD-001` Brand DNA, `BD-002` Brand Architecture, `VIS-001` Visual Identity System,
+  `DES-001` Experience Principles, `DES-002` Interaction Language, `WEB-001`
+  Information Architecture, `DS-001` Design System, `brand-guidelines.md` com os
+  tokens de design derivados dela)
 - `adr/` — decisões de arquitetura
 - `roadmap.md` / `backlog.md` — próximas fases

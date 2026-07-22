@@ -6,7 +6,7 @@
 
 **Categoria:** Identidade Visual
 
-**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos; protocolo de VIS-001.3 definido, pesquisa/validação ainda não realizada; VIS-001.4 (Identity Exploration) pendente
+**Status:** Em andamento — VIS-001.1 e VIS-001.3A concluídos; protocolo de VIS-001.3 definido, mas **superseded por decisão em `DS-001`** antes de ser executado como pesquisa (ver nota abaixo); VIS-001.4 iniciado em `DS-001`
 
 **Versão:** 0.3 (parcial)
 
@@ -107,7 +107,9 @@ Pergunta central antes de qualquer símbolo: **qual é a unidade fundamental que
 
 **Hipótese de trabalho:** a unidade fundamental é **um núcleo protegido por camadas de contexto** — não um escudo, não uma rede, não um círculo genérico. A ideia central: compreender o contexto é o que fortalece a proteção do núcleo (o patrimônio, a pessoa, a empresa). Isso conecta diretamente §1.1 (camadas, não redes), §1.2 (hierarquia por contexto) e a Nota de Reconciliação (Engenharia de Contexto como método de diagnóstico, não como estética de tecnologia).
 
-Esta é uma **hipótese**, não uma decisão de logotipo. Ela deve ser testada e validada (ou refutada) durante VIS-001.3 — se confirmada, orienta logotipo, iconografia e a linguagem gráfica do site; se refutada, VIS-001.3A precisa ser revisitado antes de prosseguir para VIS-001.4.
+Esta é uma **hipótese**, não uma decisão de logotipo. Ela deveria ter sido testada e validada (ou refutada) durante VIS-001.3 — se confirmada, orienta logotipo, iconografia e a linguagem gráfica do site; se refutada, VIS-001.3A precisaria ser revisitado antes de prosseguir para VIS-001.4.
+
+**Atualização:** essa validação empírica não ocorreu. Em vez disso, `DS-001 — Design System` adotou esta hipótese ("núcleo protegido por camadas de contexto", rebatizado ali de "Mapa Estratégico do Contexto") **por decisão direta**, resolvendo o gate de VIS-001.3 sem pesquisa. Isso está registrado formalmente na "Nota de Governança" de `DS-001`. Qualquer leitura futura deste documento deve saber: a hipótese está em uso em produção (tokens, componentes), mas nunca foi refutada nem confirmada por evidência visual real — apenas adotada.
 
 ---
 
@@ -197,7 +199,7 @@ VIS-001.4
 └── F — Aplicações
 ```
 
-`docs/brand/brand-guidelines.md` será realinhado a partir daqui, substituindo os tokens provisórios atuais.
+**Status real (atualizado):** iniciado em `DS-001 — Design System`, que já cobre D (Paleta — auditoria, sem mudança de valores) parcialmente e formaliza tokens não previstos originalmente aqui (Spacing, Grid, Elevation, Motion). A, B (Símbolo, Logotipo) permanecem não iniciados. `docs/brand/brand-guidelines.md` ainda não foi realinhado — ação pendente, não realizada neste documento.
 
 ---
 
@@ -210,12 +212,15 @@ Afeta: futuro `docs/brand/brand-guidelines.md` (tokens atuais são provisórios,
 Itens em aberto:
 
 - Reconciliação de "Engenharia de Contexto" (ver Nota de Reconciliação) — explicação completa ainda devida antes de considerar o tema encerrado.
-- Hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") — não validada; depende do resultado de VIS-001.3.
+- Hipótese da unidade fundamental (§VIS-001.3A.3: "núcleo protegido por camadas de contexto") — **adotada por decisão em `DS-001`, nunca validada nem refutada por pesquisa visual real**. VIS-001.3 (protocolo definido em §VIS-001.3 abaixo) não foi executado.
+- Símbolo e Logotipo (VIS-001.4 A/B) — não iniciados; `DS-001` cobriu paleta/tipografia/tokens, não identidade gráfica própria.
+- `docs/brand/brand-guidelines.md` — ainda não atualizado para refletir `DS-001` como fonte de verdade.
 
 ## Referências
 
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification
+- DS-001 — Design System (adota a hipótese deste documento por decisão; ver §Status real)
 - `docs/brand/brand-guidelines.md`
 
 ---
