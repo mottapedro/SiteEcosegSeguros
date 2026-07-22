@@ -199,7 +199,7 @@ VIS-001.4
 └── F — Aplicações
 ```
 
-**Status real (atualizado):** iniciado em `DS-001 — Design System`, que já cobre D (Paleta — auditoria, sem mudança de valores) parcialmente e formaliza tokens não previstos originalmente aqui (Spacing, Grid, Elevation, Motion). A, B (Símbolo, Logotipo) permanecem não iniciados. `docs/brand/brand-guidelines.md` ainda não foi realinhado — ação pendente, não realizada neste documento.
+**Status real (atualizado):** iniciado em `DS-001 — Design System` (D — Paleta, auditoria sem mudança de valores; também formaliza Spacing/Grid/Elevation/Motion, não previstos originalmente aqui) e em `MOT-001 — Motion Language` (expansão do Motion de `DS-001`) e `VIS-002 — Visual Language System` (E — Linguagem gráfica: patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas). A, B (Símbolo, Logotipo) permanecem não iniciados. `docs/brand/brand-guidelines.md` ainda não foi realinhado — ação pendente, não realizada neste documento.
 
 ---
 
@@ -221,6 +221,8 @@ Itens em aberto:
 - BD-001 — Brand DNA
 - BD-002 — Brand Architecture Specification
 - DS-001 — Design System (adota a hipótese deste documento por decisão; ver §Status real)
+- MOT-001 — Motion Language
+- VIS-002 — Visual Language System (patterns, shapes, curves, layers, ícones, ilustração, fotografia, infográficos, diagramas)
 - `docs/brand/brand-guidelines.md`
 
 ---
