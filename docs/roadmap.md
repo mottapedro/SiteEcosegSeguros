@@ -3,7 +3,8 @@
 ## Fase 1 — Arquitetura, Design System, Estrutura Base, SEO, Home (esta entrega)
 
 - Bootstrap Next.js (App Router, TS, Tailwind v4, shadcn/ui).
-- Design tokens alinhados ao Manual de Marca (ver `docs/brand-guidelines.md`).
+- Design tokens alinhados ao Manual de Marca (ver `docs/brand/brand-guidelines.md`,
+  `docs/brand/BD-001-Brand-DNA.md`, `docs/brand/BD-002-Brand-Architecture.md`).
 - Layout global (Header, Footer, WhatsApp flutuante).
 - Home completa: Hero, Produtos, Diferenciais, Parceiros, Depoimentos, CTA, Contato.
 - Formulário de contato com validação Zod client+server e envio via Resend.

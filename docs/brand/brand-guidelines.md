@@ -2,8 +2,13 @@
 
 Fonte: Manual de Identidade Visual, Design System, Brand Book e Brand DNA da EcoSeg
 (recebidos do time em 2026-07-21). Este documento resume as decisões que afetam
-diretamente o código — para contexto estratégico completo, consultar os documentos
-originais da marca.
+diretamente o código — para o contexto estratégico completo, ver
+`docs/brand/BD-001-Brand-DNA.md` (fundação permanente da marca) e
+`docs/brand/BD-002-Brand-Architecture.md` (arquitetura de portfólio, tom de voz,
+princípios de comunicação e experiência). Este documento será realinhado quando
+`VIS-001 — Visual Identity System` for formalizado, substituindo os tokens abaixo
+(hoje derivados diretamente do Manual de Identidade Visual) pelos tokens oficiais
+do sistema visual.
 
 ## Essência
 

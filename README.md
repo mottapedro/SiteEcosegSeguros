@@ -45,7 +45,7 @@ Ver `docs/`:
 - `folder-structure.md` — o que vive em cada pasta
 - `sitemap.md` — mapa do site e status de cada rota
 - `components.md` — componentes de UI/layout/seções
-- `brand-guidelines.md` — tokens de marca (paleta, tipografia) derivados do
-  Manual de Identidade Visual da EcoSeg
+- `brand/` — arquitetura de marca (`BD-001` Brand DNA, `BD-002` Brand Architecture,
+  `brand-guidelines.md` com os tokens de design derivados dela)
 - `adr/` — decisões de arquitetura
 - `roadmap.md` / `backlog.md` — próximas fases
