@@ -2,10 +2,14 @@
 @import "tw-animate-css";
 
 /*
- * Tokens sourced from the EcoSeg Manual de Identidade Visual / Design System:
- * Azul Institucional (primary), Verde Eco (accent), Cinza Grafite (muted/borders),
- * Branco + neutros claros (background/surfaces). Radius kept small — "levemente
- * arredondado", never a rounded-lg-everywhere look — for institutional robustness.
+ * Tokens sourced from the EcoSeg Manual de Identidade Visual / Design System,
+ * reassigned per ADR-B-003 (Primary Color Reassignment):
+ * Verde Eco (primary), Azul Institucional (accent/secondary), Cinza Grafite
+ * (muted/borders), Branco + neutros claros (background/surfaces — "Cream"
+ * surface neutral and "Amber" decision/alert role from ADR-B-003 remain
+ * provisional, not yet implemented here pending confirmed hex values).
+ * Radius kept small — "levemente arredondado", never a rounded-lg-everywhere
+ * look — for institutional robustness.
  */
 :root {
   --radius: 0.375rem;
@@ -19,8 +23,8 @@
   --popover: #ffffff;
   --popover-foreground: #20242a;
 
-  /* Azul Institucional */
-  --primary: #0b3d63;
+  /* Verde Eco — Institutional Primary per ADR-B-003 */
+  --primary: #1f7a5c;
   --primary-foreground: #ffffff;
 
   /* Quiet graphite-tinted surface, not a color in its own right */
@@ -30,8 +34,8 @@
   --muted: #f4f5f6;
   --muted-foreground: #5b6169; /* cinza grafite, texto de apoio */
 
-  /* Verde Eco */
-  --accent: #1f7a5c;
+  /* Azul Institucional — Institutional Secondary per ADR-B-003 */
+  --accent: #0b3d63;
   --accent-foreground: #ffffff;
 
   --destructive: #b3402f;
@@ -39,7 +43,7 @@
 
   --border: #e2e4e7;
   --input: #e2e4e7;
-  --ring: #1f7a5c;
+  --ring: #0b3d63;
 }
 
 :root[data-theme="dark"] {
@@ -69,7 +73,7 @@
 
   --border: #2b323a;
   --input: #2b323a;
-  --ring: #3fa382;
+  --ring: #6fa8d6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,8 +87,8 @@
     --popover: #1a1f26;
     --popover-foreground: #e8eaed;
 
-    --primary: #6fa8d6;
-    --primary-foreground: #0f1a24;
+    --primary: #3fa382;
+    --primary-foreground: #0d1a15;
 
     --secondary: #232a32;
     --secondary-foreground: #dbdee2;
@@ -92,15 +96,15 @@
     --muted: #1e242b;
     --muted-foreground: #98a0a8;
 
-    --accent: #3fa382;
-    --accent-foreground: #0d1a15;
+    --accent: #6fa8d6;
+    --accent-foreground: #0f1a24;
 
     --destructive: #d16a58;
     --destructive-foreground: #1a0d0a;
 
     --border: #2b323a;
     --input: #2b323a;
-    --ring: #3fa382;
+    --ring: #6fa8d6;
   }
 }
 

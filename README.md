@@ -46,7 +46,8 @@ Ver `docs/`:
 - `sitemap.md` — mapa do site e status de cada rota
 - `components.md` — componentes de UI/layout/seções
 - `brand/` — fundação da marca: `BD-001` Brand DNA, `BD-002` Brand Architecture,
-  `BD-003` Progress Protection Philosophy, `brand-guidelines.md` (tokens de design)
+  `BD-003` Progress Protection Philosophy, `brand-guidelines.md` (tokens de design),
+  `decisions/` (Brand Architecture Decision Records `ADR-B-001`–`ADR-B-005`)
 - `visual/` — experiência, identidade visual e design system, em ordem de
   dependência: `VIS-001` Visual Identity System → `DES-001` Experience Principles →
   `DES-002` Information Architecture → `DES-003` Interaction Language → `DES-004`

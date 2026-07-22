@@ -20,14 +20,16 @@ do sistema visual.
 
 ## Tokens implementados (`src/app/globals.css`)
 
+**Atualizado per `ADR-B-003 — Primary Color Reassignment`** (`docs/brand/decisions/ADR-B-003-Primary-Color-Reassignment.md`): Verde Eco é agora a cor primária institucional; Azul Institucional passou a secundária/accent.
+
 | Papel na marca     | Token shadcn             | Light               | Uso                                     |
 | ------------------ | ------------------------ | ------------------- | --------------------------------------- |
-| Azul Institucional | `--primary`              | `#0b3d63`           | Botões principais, links, hero, menu    |
-| Verde Eco          | `--accent`               | `#1f7a5c`           | Ícones, indicadores, elementos de apoio |
+| Verde Eco          | `--primary`              | `#1f7a5c`           | Botões principais, links, hero, menu    |
+| Azul Institucional | `--accent`               | `#0b3d63`           | Ícones, indicadores, elementos de apoio |
 | Cinza Grafite      | `--muted-foreground`     | `#5b6169`           | Textos de apoio, navegação              |
 | Branco / neutros   | `--background`/`--muted` | `#ffffff`/`#f4f5f6` | Fundos, cards, inputs                   |
 
-Tema escuro definido nos mesmos papéis com luminosidade ajustada — ver `globals.css`.
+Tema escuro definido nos mesmos papéis com luminosidade ajustada — ver `globals.css`. Papéis "Decision/Alert" (Amber) e "Surface Neutral" (Cream) introduzidos por `ADR-B-003` permanecem provisórios, sem hex confirmado, não implementados nesta tabela.
 
 - **Tipografia**: Inter (única família), carregada via `next/font/google` em
   `src/app/layout.tsx`. Fonte mono reservada a dados tabulares usa a stack do sistema.

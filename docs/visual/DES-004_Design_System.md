@@ -26,20 +26,22 @@ Este documento (DES-004) avança para tokens e componentes concretos **por decis
 
 ## 1. Color Tokens
 
-Sem mudança em relação ao já implementado — auditado contra o conceito de Mapa Estratégico do Contexto e aprovado: Azul Institucional (núcleo — autoridade, confiança) e Verde Eco (camada ativa — o que está sendo compreendido/investigado no momento) já funcionam nessa lógica.
+**Superseded por `ADR-B-003 — Primary Color Reassignment`** (`docs/brand/decisions/ADR-B-003-Primary-Color-Reassignment.md`): Verde Eco passou a ser a cor primária institucional, Azul Institucional passou a secundária. A tabela abaixo reflete o estado pós-ADR-B-003, já implementado em `src/app/globals.css`.
 
 | Token                             | Papel no Mapa Estratégico do Contexto                                    | Light                 | Dark                  |
 | --------------------------------- | ------------------------------------------------------------------------ | --------------------- | --------------------- |
 | `--background`                    | O espaço — contexto ainda não focado                                     | `#ffffff`             | `#14181d`             |
 | `--foreground`                    | Texto — a leitura do contexto                                            | `#20242a`             | `#e8eaed`             |
-| `--primary` (Azul Institucional)  | O núcleo — autoridade, o que está sendo protegido                        | `#0b3d63`             | `#6fa8d6`             |
-| `--accent` (Verde Eco)            | A camada ativa — investigação, ação, diagnóstico em curso                | `#1f7a5c`             | `#3fa382`             |
+| `--primary` (Verde Eco)           | O núcleo — autoridade, o que está sendo protegido                        | `#1f7a5c`             | `#3fa382`             |
+| `--accent` (Azul Institucional)   | Camada secundária — apoio institucional ao núcleo                        | `#0b3d63`             | `#6fa8d6`             |
 | `--secondary`                     | Camada intermediária — contexto de apoio, não em foco                    | `#f1f3f5`             | `#232a32`             |
 | `--muted` / `--muted-foreground`  | Camada periférica — informação de apoio, discreta                        | `#f4f5f6` / `#5b6169` | `#1e242b` / `#98a0a8` |
 | `--destructive`                   | Ruptura — algo saiu do fluxo esperado (erro)                             | `#b3402f`             | `#d16a58`             |
 | `--border` / `--input` / `--ring` | Limite entre camadas — onde uma seção de contexto termina e outra começa | `#e2e4e7`             | `#2b323a`             |
 
-Fonte: `src/app/globals.css` (implementado), `docs/brand/brand-guidelines.md` (documentado). Nenhuma mudança de valor neste documento — apenas a atribuição de significado conceitual que faltava.
+Fonte: `src/app/globals.css` (implementado, atualizado per ADR-B-003), `docs/brand/brand-guidelines.md` (documentado — ainda não realinhado, ver item em aberto).
+
+**Pendente de ADR-B-003, não implementado ainda:** os papéis "Decision/Alert" (Amber) e "Surface Neutral" (Cream) não existem como tokens neste sistema — valores propostos permanecem provisórios em `ADR-B-003`, sem confirmação.
 
 ## 2. Typography Tokens
 
