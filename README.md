@@ -47,7 +47,7 @@ Ver `docs/`:
 - `components.md` — componentes de UI/layout/seções
 - `brand/` — arquitetura de marca, experiência e informação (`BD-001` Brand DNA,
   `BD-002` Brand Architecture, `VIS-001` Visual Identity System, `DES-001` Experience
-  Principles, `WEB-001` Information Architecture, `brand-guidelines.md` com os tokens
-  de design derivados dela)
+  Principles, `DES-002` Interaction Language, `WEB-001` Information Architecture,
+  `brand-guidelines.md` com os tokens de design derivados dela)
 - `adr/` — decisões de arquitetura
 - `roadmap.md` / `backlog.md` — próximas fases
