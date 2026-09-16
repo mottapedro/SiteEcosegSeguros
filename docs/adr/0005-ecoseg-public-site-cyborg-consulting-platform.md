@@ -293,9 +293,42 @@ Decisões iniciais:
 
 A definição jurídica final dos fundamentos deverá ser validada por profissional habilitado antes da coleta produtiva.
 
-## 4.7 Corte exato da V1
+## 4.7 Corte de entrega: Marco 0 e V1
 
-### Incluído na V1
+A palestra é o primeiro marco da parceria e o primeiro instrumento de descoberta do negócio. Ela não aguardará a conclusão do modelo de domínio integral do SaaS.
+
+### Marco 0 — Palestra e descoberta operacional
+
+Incluído:
+
+- inventário dos tópicos legais fornecidos por João;
+- conferência das fontes oficiais;
+- validação jurídica e editorial do conteúdo utilizado;
+- roteiro mestre da palestra;
+- página pública do evento;
+- modo apresentação no website;
+- ensaio com João;
+- QR Code;
+- aviso de privacidade;
+- formulário mínimo de interesse;
+- identificação do evento/campanha;
+- registro rastreável dos interessados;
+- relatório pós-evento com perguntas, objeções, perfis, demandas e conversões.
+
+O Marco 0 não inclui motor de aderência, recomendação individual, prontuário consultivo completo ou catálogo operacional de produtos.
+
+### Critério de sucesso do Marco 0
+
+O Marco 0 será considerado validado quando João conseguir:
+
+1. conduzir a palestra pelo website;
+2. apresentar apenas conteúdo jurídico validado;
+3. registrar interessados com transparência e minimização de dados;
+4. encaminhar os interessados para atendimento;
+5. produzir evidências sobre dores, perfis, dúvidas e objeções reais do público do CTA;
+6. utilizar essas evidências no refinamento do produto SaaS.
+
+### Incluído na V1 consultiva
 
 **Site público ECOSEG**
 
@@ -346,17 +379,16 @@ A definição jurídica final dos fundamentos deverá ser validada por profissio
 - operação multiempresa em produção;
 - ingestão automática de decisões judiciais sem revisão humana.
 
-### Critério de sucesso da V1
+### Critério de sucesso da V1 consultiva
 
-A V1 será considerada validada quando permitir que João:
+A V1 consultiva será considerada validada quando, utilizando as evidências do Marco 0, permitir que João:
 
-1. conduza a palestra pelo website;
-2. receba interessados de forma rastreável;
-3. realize diagnóstico consultivo;
-4. visualize categorias de produtos aderentes com fundamento e ressalvas;
-5. explique a recomendação;
-6. registre a decisão e o próximo passo;
-7. execute esse fluxo no CTA sem depender de arquivos dispersos.
+1. receba os interessados qualificados pela palestra;
+2. realize diagnóstico consultivo;
+3. visualize categorias de produtos aderentes com fundamento e ressalvas;
+4. explique a recomendação;
+5. registre a decisão e o próximo passo;
+6. execute esse fluxo no CTA sem depender de arquivos dispersos.
 
 ---
 
@@ -455,32 +487,53 @@ Este ADR:
 - não substitui parecer jurídico;
 - não autoriza implementação direta na branch `main`.
 
-A sequência formal permanece:
+A sequência formal passa a distinguir o marco de parceria da construção integral da plataforma:
 
 ```text
 ADR 0005
-→ modelo de domínio
+→ Marco 0: conteúdo governado + roteiro da palestra
+→ protótipo e modo apresentação
+→ privacidade + captação mínima
+→ ensaio com João
+→ palestra no CTA
+→ evidências do público e da operação
+→ refinamento do modelo de negócio
+→ modelo de domínio do SaaS
 → contratos de dados e API
-→ threat/privacy model
-→ backlog da V1
-→ protótipo
+→ threat/privacy model integral
+→ backlog da V1 consultiva
 → implementação
-→ homologação no CTA
+→ homologação consultiva no CTA
 ```
+
+A palestra constitui autorização para descoberta e validação do negócio, não autorização automática para construir todas as capacidades do SaaS.
 
 ---
 
 ## 9. Próximas decisões necessárias
 
+### Antes da palestra
+
+1. Data, duração, local e capacidade do evento.
+2. Público prioritário e convite.
+3. Tópicos jurídicos que entrarão no roteiro.
+4. Responsável pela validação jurídica.
+5. Produtos e categorias que podem ser mencionados.
+6. Dados mínimos do formulário e aviso de privacidade.
+7. Resultado esperado e métricas do evento.
+8. Responsável pelo retorno aos interessados.
+
+### Após a palestra
+
 1. Nome comercial da plataforma.
 2. Repositório privado e estratégia de deploy.
-3. Responsáveis por validação jurídica e editorial.
+3. Responsáveis permanentes por validação jurídica e editorial.
 4. Controlador e operador de cada fluxo de dados.
 5. Política de retenção.
 6. Catálogo inicial de produtos.
 7. Matriz inicial de perfis e regras.
 8. Contrato de licença ECOSEG × Cyborg.
-9. Critérios de homologação no CTA.
+9. Critérios da V1 consultiva.
 10. Plano de contingência para regra jurídica suspensa ou desatualizada.
 
 ---
@@ -513,3 +566,32 @@ Afeta futuramente:
 ---
 
 © ECOSEG / Cyborg Tecnologia
+
+
+---
+
+## 11. Palestra como Instrumento de Descoberta do Negócio
+
+A palestra é simultaneamente:
+
+- entrega inicial de valor ao João;
+- abertura institucional da parceria;
+- validação do posicionamento da ECOSEG;
+- mecanismo de acesso ao público do CTA;
+- fonte governada de evidências para o SaaS.
+
+O relatório pós-evento deverá consolidar:
+
+- quantidade de participantes;
+- perfis predominantes;
+- perguntas realizadas;
+- tópicos com maior interesse;
+- objeções recorrentes;
+- expectativas equivocadas identificadas;
+- categorias de proteção procuradas;
+- interessados captados;
+- atendimentos agendados;
+- conversões posteriores;
+- alterações necessárias no roteiro, no diagnóstico e no produto.
+
+Nenhuma observação isolada será convertida automaticamente em regra de aderência. Evidência de campo deverá ser classificada, revisada e relacionada a fonte jurídica e produto antes de entrar no domínio da plataforma.
