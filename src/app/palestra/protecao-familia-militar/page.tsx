@@ -10,6 +10,7 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { militaryFamilyProtectionPresentation as presentation } from "@/content/presentations/military-family-protection";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { isPresentationPublishable } from "@/contracts/presentation";
 import { cn } from "@/lib/utils";
 
 const path = "/palestra/protecao-familia-militar";
@@ -26,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
     "planejamento",
     "ECOSEG",
   ],
-  noIndex: presentation.status !== "VALIDATED",
+  noIndex: !isPresentationPublishable(presentation),
 });
 
 const journey = [
