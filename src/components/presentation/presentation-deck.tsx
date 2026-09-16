@@ -35,6 +35,37 @@ export function PresentationDeck({
   }, [presentation.sections.length]);
 
   useEffect(() => {
+    const siteChrome = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        "body > header, body > footer, body > a"
+      )
+    );
+
+    const previousState = siteChrome.map((element) => ({
+      element,
+      ariaHidden: element.getAttribute("aria-hidden"),
+      inert: element.inert,
+    }));
+
+    siteChrome.forEach((element) => {
+      element.setAttribute("aria-hidden", "true");
+      element.inert = true;
+    });
+
+    return () => {
+      previousState.forEach(({ element, ariaHidden, inert }) => {
+        if (ariaHidden === null) {
+          element.removeAttribute("aria-hidden");
+        } else {
+          element.setAttribute("aria-hidden", ariaHidden);
+        }
+
+        element.inert = inert;
+      });
+    };
+  }, []);
+
+  useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "ArrowLeft" || event.key === "PageUp") {
         goPrevious();
