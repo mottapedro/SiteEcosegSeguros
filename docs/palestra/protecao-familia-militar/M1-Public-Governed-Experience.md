@@ -10,7 +10,9 @@ Transformar o vertical slice de homologação em primeira experiência pública 
 
 ## Cadeia de autoridade
 
-Miro Discovery → Brand Authority → VV-M0 Evidence → M1 Requirements → Legal Evidence → Implementation → Validation.
+Miro Discovery → Brand Authority → Digital Experience Constitution → VV-M0 Evidence → M1 Requirements → Legal Evidence → Implementation → Validation.
+
+`DES-000 — Digital Experience Constitution` passa a integrar formalmente a cadeia normativa do M1 como ponto constitucional de citação para decisões de experiência digital. Ele não substitui as autoridades de marca, visuais ou de domínio das quais deriva.
 
 ## Heritage / Requirement Evolution
 
@@ -69,11 +71,21 @@ Esse refinamento é governado por M1-R01 e deve ser respeitado por M1-R02.
 | ID | Requisito | Estado |
 |---|---|---|
 | M1-R01 | Public × Governance Context Separation | SPECIFIED |
-| M1-R02 | Landing Public Experience | PENDING |
+| M1-R02 | Landing Public Experience | SPECIFIED |
 | M1-R03 | Presentation Types | PENDING |
 | M1-R04 | Governed Legal Evidence | PENDING |
 | M1-R05 | Visual Hierarchy / Brand | PENDING |
 | M1-R06 | Theme Token Consistency | PENDING |
+
+### M1-R02 — autoridade executável
+
+M1-R02 herda a fronteira Public × Governance fechada por M1-R01 e aplica `DES-000` diretamente à landing pública, especialmente os Artigos I, II, III e VI: clareza antes da persuasão, contexto antes da decisão, compreensão antes da conversão e confiança construída por transparência.
+
+A especificação executável está em:
+
+`docs/palestra/protecao-familia-militar/requirements/M1-R02-Landing-Public-Experience.md`
+
+Sua especificação está fechada; a implementação permanece bloqueada até autorização explícita.
 
 ## Conteúdo jurídico elegível
 
@@ -87,8 +99,11 @@ Esse refinamento é governado por M1-R01 e deve ser respeitado por M1-R02.
 ARCHITECTURE_REWRITE=NO
 M0_001_MASTER_BACKLOG=PRESERVED
 M1_PARALLEL_ROADMAP=NO
+DES_000_CONSTITUTIONAL_AUTHORITY=ACTIVE
 PRODUCT_RECOMMENDATION=BLOCKED
 INDIVIDUAL_DIAGNOSIS_ON_STAGE=NO
 VIS_001=OPEN
 VIS_001_BLOCKS_M1=NO
+M1_R02=SPECIFIED
+M1_R02_IMPLEMENTATION_AUTHORIZED=NO
 ```
