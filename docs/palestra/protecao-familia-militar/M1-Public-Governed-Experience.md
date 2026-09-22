@@ -72,7 +72,7 @@ Esse refinamento é governado por M1-R01 e deve ser respeitado por M1-R02.
 |---|---|---|
 | M1-R01 | Public × Governance Context Separation | SPECIFIED |
 | M1-R02 | Landing Public Experience | SPECIFIED |
-| M1-R03 | Presentation Types | PENDING |
+| M1-R03 | Presentation Types | SPECIFIED / CLOSED |
 | M1-R04 | Governed Legal Evidence | PENDING |
 | M1-R05 | Visual Hierarchy / Brand | PENDING |
 | M1-R06 | Theme Token Consistency | PENDING |
@@ -86,6 +86,16 @@ A especificação executável está em:
 `docs/palestra/protecao-familia-militar/requirements/M1-R02-Landing-Public-Experience.md`
 
 Sua especificação está fechada; a implementação permanece bloqueada até autorização explícita.
+
+### M1-R03 — Presentation Types
+
+M1-R03 materializa no canal palestra a cadeia institucional `Brand → ADR-B → Visual → DES → Presentation` e define seis funções narrativas explícitas: `OPENING`, `CONTEXT`, `EVIDENCE`, `EXPLANATION`, `METHOD` e `CTA`.
+
+A especificação executável está em:
+
+`docs/palestra/protecao-familia-militar/requirements/M1-R03-Presentation-Types.md`
+
+Sua especificação está fechada; a implementação permanece bloqueada até autorização explícita. A integração concreta de evidência jurídica permanece responsabilidade de M1-R04.
 
 ## Conteúdo jurídico elegível
 
@@ -106,4 +116,6 @@ VIS_001=OPEN
 VIS_001_BLOCKS_M1=NO
 M1_R02=SPECIFIED
 M1_R02_IMPLEMENTATION_AUTHORIZED=NO
+M1_R03=SPECIFIED_CLOSED
+M1_R03_IMPLEMENTATION_AUTHORIZED=NO
 ```
