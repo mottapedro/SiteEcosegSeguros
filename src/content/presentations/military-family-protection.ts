@@ -13,8 +13,7 @@ export const militaryFamilyProtectionPresentation = {
   title: "Proteção da família militar",
   subtitle:
     "Uma conversa sobre expectativas, mudanças de contexto e decisões de proteção.",
-  audience:
-    "Militares da ativa, reserva e reforma, pensionistas e dependentes",
+  audience: "Militares da ativa, reserva e reforma, pensionistas e dependentes",
   version: "0.1.0-demo",
   status: "DRAFT",
   disclaimer:
@@ -22,6 +21,7 @@ export const militaryFamilyProtectionPresentation = {
   sections: [
     {
       id: "opening",
+      type: "OPENING",
       eyebrow: "Ponto de partida",
       title: "O que sua família espera que esteja protegido?",
       summary:
@@ -35,6 +35,7 @@ export const militaryFamilyProtectionPresentation = {
     },
     {
       id: "context",
+      type: "CONTEXT",
       eyebrow: "Contexto",
       title: "Expectativa e realidade precisam ser comparadas",
       summary:
@@ -61,6 +62,7 @@ export const militaryFamilyProtectionPresentation = {
     },
     {
       id: "method",
+      type: "METHOD",
       eyebrow: "Método ECOSEG",
       title: "Compreender antes de recomendar",
       summary:
