@@ -50,7 +50,7 @@ A palestra será conduzida por João Brito, Diretor Executivo Comercial da ECOSE
 - instrumento de descoberta das dúvidas e objeções do público;
 - fonte de evidências para o futuro produto consultivo.
 
-O evento está previsto para **21/10/2026**, sujeito à confirmação operacional do CTA.
+A data operacional definida para o evento é **21/10/2026**.
 
 A página da palestra fica em:
 
