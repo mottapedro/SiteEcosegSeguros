@@ -1,9 +1,5 @@
 export type LegalReferenceStatus =
-  | "DRAFT"
-  | "IN_REVIEW"
-  | "VALIDATED"
-  | "SUSPENDED"
-  | "OUTDATED";
+  "DRAFT" | "IN_REVIEW" | "VALIDATED" | "SUSPENDED" | "OUTDATED";
 
 export interface PresentationReference {
   id: string;
@@ -16,8 +12,12 @@ export interface PresentationReference {
   note: string;
 }
 
+export type PresentationSectionType =
+  "OPENING" | "CONTEXT" | "EVIDENCE" | "EXPLANATION" | "METHOD" | "CTA";
+
 export interface PresentationSection {
   id: string;
+  type?: PresentationSectionType;
   eyebrow: string;
   title: string;
   summary: string;
@@ -43,14 +43,10 @@ export interface PresentationContent {
 export function getPublishableReferences(
   presentation: PresentationContent
 ): PresentationReference[] {
-  return presentation.references.filter(
-    (reference) => reference.status === "VALIDATED"
-  );
+  return presentation.references.filter((reference) => reference.status === "VALIDATED");
 }
 
-export function isPresentationPublishable(
-  presentation: PresentationContent
-): boolean {
+export function isPresentationPublishable(presentation: PresentationContent): boolean {
   if (presentation.status !== "VALIDATED") {
     return false;
   }
@@ -60,15 +56,13 @@ export function isPresentationPublishable(
   );
 
   return [...referencedIds].every((referenceId) => {
-    const reference = presentation.references.find(
-      (item) => item.id === referenceId
-    );
+    const reference = presentation.references.find((item) => item.id === referenceId);
 
     return Boolean(
       reference?.status === "VALIDATED" &&
-        reference.sourceUrl &&
-        reference.consultedAt &&
-        reference.reviewedBy
+      reference.sourceUrl &&
+      reference.consultedAt &&
+      reference.reviewedBy
     );
   });
 }
