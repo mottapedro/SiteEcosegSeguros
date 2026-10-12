@@ -161,18 +161,24 @@ export function PresentationDeck({
           <p className="text-primary-foreground text-sm font-semibold tracking-[0.2em] uppercase">
             {section.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-5xl text-4xl leading-[1.08] font-bold tracking-tight sm:text-6xl lg:text-7xl">
+          <h1
+            className={`${section.type === "OPENING" ? "mt-7" : "mt-5"} max-w-5xl text-4xl leading-[1.08] font-bold tracking-tight sm:text-6xl lg:text-7xl`}
+          >
             {section.title}
           </h1>
-          <p className="mt-7 max-w-4xl text-lg leading-8 opacity-80 sm:text-2xl sm:leading-10">
+          <p
+            className={`${section.type === "OPENING" ? "mt-9" : "mt-7"} ${section.type === "CONTEXT" ? "max-w-3xl" : "max-w-4xl"} text-lg leading-8 opacity-80 sm:text-2xl sm:leading-10`}
+          >
             {section.summary}
           </p>
 
-          <ul className="mt-9 grid max-w-6xl gap-3 text-base sm:grid-cols-3 sm:text-lg">
+          <ul
+            className={`${section.type === "OPENING" ? "mt-12" : "mt-9"} grid ${section.type === "CONTEXT" ? "max-w-5xl" : "max-w-6xl"} ${section.type === "METHOD" ? "gap-6" : "gap-3"} text-base sm:grid-cols-3 sm:text-lg`}
+          >
             {section.talkingPoints.map((point) => (
               <li
                 key={point}
-                className="border-l-2 border-white/30 pl-4 leading-7"
+                className={`border-l-2 border-white/30 ${section.type === "METHOD" ? "pl-6" : "pl-4"} leading-7`}
               >
                 {point}
               </li>
