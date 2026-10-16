@@ -56,7 +56,6 @@ export function Footer() {
         <div>
           <h3 className="text-foreground text-sm font-semibold">Contato</h3>
           <ul className="text-muted-foreground mt-4 space-y-3 text-sm">
-            <li>{siteConfig.phone}</li>
             <li>{siteConfig.email}</li>
           </ul>
         </div>

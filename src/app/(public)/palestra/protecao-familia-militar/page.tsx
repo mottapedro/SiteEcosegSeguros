@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   BookOpenCheck,
-  Presentation,
   ShieldCheck,
   Users,
 } from "lucide-react";
@@ -45,6 +44,16 @@ const journey = [
   },
 ];
 
+const eventDetails = [
+  "Temas: pecúlio, previdência, pensão militar e seguros.",
+  "Local: Clube dos Taifeiros da Aeronáutica.",
+  "Data: 21/10/2026.",
+  "Condução: João Brito — Diretor Executivo da ECOSEG e equipe.",
+] as const;
+
+const audienceText =
+  "Militares ativos e veteranos das Forças Armadas, dependentes, pensionistas e pessoas interessadas.";
+
 export default function MilitaryFamilyProtectionLecturePage() {
   return (
     <div className="bg-background">
@@ -81,28 +90,40 @@ export default function MilitaryFamilyProtectionLecturePage() {
           </div>
 
           <aside className="border-border bg-muted/45 border p-7 shadow-sm">
-            <div className="flex items-center gap-3">
-              <Presentation className="text-primary size-6" aria-hidden />
-              <h2 className="text-lg font-semibold">Versão de homologação</h2>
-            </div>
             <dl className="mt-6 grid gap-5 text-sm">
               <div>
                 <dt className="text-muted-foreground">Público</dt>
-                <dd className="mt-1 font-medium">{presentation.audience}</dd>
-              </div>
-              <div>
-                <dt className="text-muted-foreground">Versão</dt>
-                <dd className="mt-1 font-mono font-medium">{presentation.version}</dd>
-              </div>
-              <div>
-                <dt className="text-muted-foreground">Status editorial</dt>
-                <dd className="mt-1 font-mono font-semibold">{presentation.status}</dd>
+                <dd className="mt-1 font-medium">{audienceText}</dd>
               </div>
             </dl>
             <p className="border-border text-muted-foreground mt-6 border-t pt-5 text-sm leading-6">
               {presentation.disclaimer}
             </p>
           </aside>
+        </div>
+      </section>
+
+      <section aria-labelledby="event-details-title" className="border-border border-b">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+          <p className="text-primary text-sm font-semibold uppercase tracking-[0.2em]">
+            Encontro
+          </p>
+          <h2
+            id="event-details-title"
+            className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl"
+          >
+            Informação antes de produto
+          </h2>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {eventDetails.map((detail) => (
+              <li
+                key={detail}
+                className="border-border bg-card text-muted-foreground border p-5 text-sm leading-6"
+              >
+                {detail}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -198,9 +219,6 @@ export default function MilitaryFamilyProtectionLecturePage() {
       <section className="bg-accent text-accent-foreground">
         <div className="mx-auto flex max-w-7xl flex-col gap-7 px-6 py-16 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold tracking-[0.16em] uppercase opacity-80">
-              Primeiro vertical slice
-            </p>
             <h2 className="mt-3 text-3xl font-bold">
               A experiência já pode ser ensaiada sem antecipar decisões legais.
             </h2>
