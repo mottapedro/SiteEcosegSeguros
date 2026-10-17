@@ -2,22 +2,14 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Expand,
-  Home,
-  Minimize,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Expand, Home, Minimize } from "lucide-react";
 import type { PresentationContent } from "@/contracts/presentation";
 
 interface PresentationDeckProps {
   presentation: PresentationContent;
 }
 
-export function PresentationDeck({
-  presentation,
-}: PresentationDeckProps) {
+export function PresentationDeck({ presentation }: PresentationDeckProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const section = presentation.sections[activeIndex];
@@ -29,16 +21,12 @@ export function PresentationDeck({
   }, []);
 
   const goNext = useCallback(() => {
-    setActiveIndex((current) =>
-      Math.min(presentation.sections.length - 1, current + 1)
-    );
+    setActiveIndex((current) => Math.min(presentation.sections.length - 1, current + 1));
   }, [presentation.sections.length]);
 
   useEffect(() => {
     const siteChrome = Array.from(
-      document.querySelectorAll<HTMLElement>(
-        "body > header, body > footer, body > a"
-      )
+      document.querySelectorAll<HTMLElement>("body > header, body > footer, body > a")
     );
 
     const previousState = siteChrome.map((element) => ({
@@ -71,11 +59,7 @@ export function PresentationDeck({
         goPrevious();
       }
 
-      if (
-        event.key === "ArrowRight" ||
-        event.key === "PageDown" ||
-        event.key === " "
-      ) {
+      if (event.key === "ArrowRight" || event.key === "PageDown" || event.key === " ") {
         event.preventDefault();
         goNext();
       }
@@ -114,106 +98,117 @@ export function PresentationDeck({
   const progress = ((activeIndex + 1) / presentation.sections.length) * 100;
 
   return (
-    <div className="bg-accent text-accent-foreground fixed inset-0 z-[100] flex min-h-dvh flex-col overflow-hidden">
+    <div className="fixed inset-0 z-[100] flex min-h-dvh flex-col overflow-hidden bg-[#0B132B] font-sans text-[#F4F7FB] selection:bg-[#D4AF37]/25 selection:text-[#F6D978]">
+      {/* Brass progress line: the only full-width active accent on the stage. */}
       <div
-        className="bg-primary h-1.5 transition-[width] duration-300 motion-reduce:transition-none"
+        className="h-1.5 bg-[#D4AF37] transition-[width] duration-300 motion-reduce:transition-none"
         style={{ width: `${progress}%` }}
         aria-hidden
       />
 
-      <header className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8">
+      <header className="flex items-center justify-between gap-4 border-b border-[#2A3A60] bg-[#0E1935]/95 px-6 py-4 backdrop-blur-md sm:px-8">
         <Link
           href="/palestra/protecao-familia-militar"
-          className="inline-flex items-center gap-2 text-sm font-medium opacity-80 transition-opacity hover:opacity-100"
+          className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold text-[#AEBBD4] transition-colors hover:text-[#F6D978] focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0E1935] focus-visible:outline-none"
         >
           <Home className="size-4" aria-hidden />
           <span className="hidden sm:inline">Página da palestra</span>
         </Link>
 
-        <div className="text-center">
-          <p className="text-xs font-semibold tracking-[0.16em] uppercase opacity-70">
-            ECOSEG · Modo apresentação
-          </p>
-          <p className="mt-1 font-mono text-xs opacity-65">
-            {presentation.version}
-          </p>
+        <div className="min-w-0 text-center">
+          <div className="flex items-center justify-center gap-3">
+            <span
+              className="size-1.5 shrink-0 animate-pulse rounded-full bg-[#D4AF37]"
+              aria-hidden
+            />
+            <p className="truncate text-xs font-bold tracking-[0.16em] text-[#F6D978] uppercase">
+              EcoSeg · Modo Apresentação
+            </p>
+          </div>
+          <p className="mt-1 font-mono text-xs text-[#7182A5]">{presentation.version}</p>
         </div>
 
         <button
           type="button"
           onClick={toggleFullscreen}
-          className="rounded-md p-2 transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white"
+          className="shrink-0 rounded-lg p-2 text-[#AEBBD4] transition-colors hover:bg-[#182747] hover:text-white focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:outline-none"
           aria-label={isFullscreen ? "Sair da tela cheia" : "Usar tela cheia"}
         >
           {isFullscreen ? (
-            <Minimize className="size-5" aria-hidden />
+            <Minimize className="size-4" aria-hidden />
           ) : (
-            <Expand className="size-5" aria-hidden />
+            <Expand className="size-4" aria-hidden />
           )}
         </button>
       </header>
 
       <main
-        className="mx-auto flex w-full max-w-7xl flex-1 items-center px-6 py-8 sm:px-10 lg:px-14"
+        className="mx-auto flex w-full max-w-6xl flex-1 items-center px-6 py-10 sm:px-12"
         aria-live="polite"
       >
-        <article className="w-full">
-          <p className="text-primary-foreground text-sm font-semibold tracking-[0.2em] uppercase">
+        <article className="w-full space-y-6">
+          <div className="inline-flex items-center rounded-full border border-[#D4AF37]/45 bg-[#D4AF37]/10 px-3 py-1 text-xs font-bold tracking-[0.16em] text-[#F6D978] uppercase">
             {section.eyebrow}
-          </p>
+          </div>
+
           <h1
-            className={`${section.type === "OPENING" ? "mt-7" : "mt-5"} max-w-5xl text-4xl leading-[1.08] font-bold tracking-tight sm:text-6xl lg:text-7xl`}
+            className={`text-3xl leading-[1.12] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl ${
+              section.type === "OPENING" ? "text-[#F6D978]" : ""
+            }`}
           >
             {section.title}
           </h1>
-          <p
-            className={`${section.type === "OPENING" ? "mt-9" : "mt-7"} ${section.type === "CONTEXT" ? "max-w-3xl" : "max-w-4xl"} text-lg leading-8 opacity-80 sm:text-2xl sm:leading-10`}
-          >
+
+          <p className="max-w-4xl text-base leading-relaxed font-normal text-[#D8E1F0] sm:text-xl">
             {section.summary}
           </p>
 
-          <ul
-            className={`${section.type === "OPENING" ? "mt-12" : "mt-9"} grid ${section.type === "CONTEXT" ? "max-w-5xl" : "max-w-6xl"} ${section.type === "METHOD" ? "gap-6" : "gap-3"} text-base sm:grid-cols-3 sm:text-lg`}
-          >
-            {section.talkingPoints.map((point) => (
-              <li
+          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-3">
+            {section.talkingPoints.map((point, index) => (
+              <div
                 key={point}
-                className={`border-l-2 border-white/30 ${section.type === "METHOD" ? "pl-6" : "pl-4"} leading-7`}
+                className="flex flex-col justify-between rounded-2xl border border-[#2A3A60] bg-[#111D3A] p-5 shadow-[0_12px_30px_rgba(3,8,24,0.28)] transition-colors hover:border-[#D4AF37]/60"
               >
-                {point}
-              </li>
+                <div className="mb-3 flex items-center justify-between font-mono text-xs text-[#7182A5]">
+                  <span className="font-bold text-[#D4AF37]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="size-1.5 rounded-full bg-[#3B4D76]" />
+                </div>
+                <p className="text-sm leading-snug text-[#F4F7FB]">{point}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </article>
       </main>
 
-      <footer className="border-t border-white/15 px-5 py-4 sm:px-8">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-          <p className="hidden max-w-2xl text-xs leading-5 opacity-60 md:block">
+      <footer className="border-t border-[#2A3A60] bg-[#0E1935]/95 px-6 py-4 sm:px-8">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+          <p className="hidden max-w-2xl text-[11px] leading-relaxed text-[#8F9FBD] md:block">
             {presentation.disclaimer}
           </p>
 
           <div className="ml-auto flex items-center gap-3">
-            <span className="min-w-16 text-center font-mono text-sm opacity-70">
+            <span className="min-w-16 text-center font-mono text-xs font-semibold text-[#AEBBD4]">
               {activeIndex + 1} / {presentation.sections.length}
             </span>
             <button
               type="button"
               onClick={goPrevious}
               disabled={isFirst}
-              className="rounded-md border border-white/25 p-3 transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white disabled:cursor-not-allowed disabled:opacity-30"
+              className="rounded-xl border border-[#3B4D76] bg-[#111D3A] p-2.5 text-[#D8E1F0] transition-colors hover:bg-[#182747] hover:text-white focus-visible:ring-2 focus-visible:ring-[#D4AF37] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-30"
               aria-label="Voltar seção"
             >
-              <ArrowLeft className="size-5" aria-hidden />
+              <ArrowLeft className="size-4" aria-hidden />
             </button>
             <button
               type="button"
               onClick={goNext}
               disabled={isLast}
-              className="bg-primary text-primary-foreground rounded-md p-3 transition-opacity hover:opacity-85 focus-visible:ring-2 focus-visible:ring-white disabled:cursor-not-allowed disabled:opacity-30"
+              className="rounded-xl bg-[#D4AF37] p-2.5 font-bold text-[#0B132B] shadow-[0_8px_20px_rgba(212,175,55,0.2)] transition-colors hover:bg-[#E3C45A] focus-visible:ring-2 focus-visible:ring-[#F6D978] focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-30"
               aria-label="Avançar seção"
             >
-              <ArrowRight className="size-5" aria-hidden />
+              <ArrowRight className="size-4" aria-hidden />
             </button>
           </div>
         </div>
