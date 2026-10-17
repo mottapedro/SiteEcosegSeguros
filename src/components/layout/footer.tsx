@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
+import { EcoSegLogo } from "@/components/brand/EcoSegLogo";
 import { siteConfig } from "@/lib/seo/config";
 
 const FOOTER_COLUMNS = [
@@ -26,13 +26,32 @@ export function Footer() {
     <footer className="border-border/70 bg-secondary/40 border-t">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <div className="text-foreground flex items-center gap-2 text-lg font-bold tracking-tight">
-            <ShieldCheck className="text-accent size-6" aria-hidden />
-            EcoSeg
-          </div>
-          <p className="text-muted-foreground mt-3 max-w-sm text-sm">
+          {/* Logo Oficial EcoSeg - Símbolo Arquitetural de Compreensão */}
+          <Link href="/" className="inline-block transition-opacity hover:opacity-90">
+            <EcoSegLogo
+              size={36}
+              finish="brass"
+              tagline="PLANEJAMENTO & PROTEÇÃO PATRIMONIAL"
+            />
+          </Link>
+
+          <p className="text-muted-foreground mt-4 max-w-sm text-sm leading-relaxed">
             {siteConfig.description}
           </p>
+
+          <div className="mt-6">
+            <h4 className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">
+              Contato
+            </h4>
+            <p className="text-muted-foreground mt-1 text-sm">
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="hover:text-foreground transition-colors"
+              >
+                {siteConfig.email}
+              </a>
+            </p>
+          </div>
         </div>
 
         {FOOTER_COLUMNS.map((column) => (
@@ -52,20 +71,20 @@ export function Footer() {
             </ul>
           </div>
         ))}
-
-        <div>
-          <h3 className="text-foreground text-sm font-semibold">Contato</h3>
-          <ul className="text-muted-foreground mt-4 space-y-3 text-sm">
-            <li>{siteConfig.email}</li>
-          </ul>
-        </div>
       </div>
 
       <div className="border-border/70 border-t px-6 py-6">
-        <p className="text-muted-foreground mx-auto max-w-7xl text-xs">
-          © {new Date().getFullYear()} {siteConfig.legalName}. Todos os direitos
-          reservados.
-        </p>
+        <div className="text-muted-foreground mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-xs sm:flex-row">
+          <p>
+            © {new Date().getFullYear()} {siteConfig.legalName}. Todos os direitos
+            reservados.
+          </p>
+          <div className="flex items-center gap-3 font-mono text-[11px]">
+            <span>ADR-B-001 Compreensão</span>
+            <span>·</span>
+            <span>DES-006 Anti-Clichê</span>
+          </div>
+        </div>
       </div>
     </footer>
   );
