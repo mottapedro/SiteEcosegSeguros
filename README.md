@@ -23,7 +23,8 @@ pnpm install
 pnpm dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000).
+Abra [http://localhost:3005](http://localhost:3005) (a porta padrão do projeto é a
+`3005`, fixada em `pnpm dev` via `next dev -p 3005`).
 
 Para o formulário de contato enviar e-mails, configure `RESEND_API_KEY` em
 `.env.local` (ver `.env.example`).
@@ -31,8 +32,9 @@ Para o formulário de contato enviar e-mails, configure `RESEND_API_KEY` em
 ## Scripts
 
 ```bash
-pnpm dev      # servidor de desenvolvimento
+pnpm dev      # servidor de desenvolvimento em http://localhost:3005
 pnpm build    # build de produção
+pnpm start    # servidor de produção em http://localhost:3005
 pnpm lint     # ESLint
 pnpm format   # Prettier
 ```

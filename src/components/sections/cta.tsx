@@ -19,6 +19,7 @@ export function Cta({ content }: { content: HomeContent["cta"] }) {
           size="lg"
           variant="secondary"
           className="shrink-0"
+          nativeButton={false}
           render={
             <Link href="/contato">
               {content.action}

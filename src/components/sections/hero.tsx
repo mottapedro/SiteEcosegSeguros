@@ -25,6 +25,7 @@ export function Hero({ content }: { content: HomeContent["hero"] }) {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button
               size="lg"
+              nativeButton={false}
               render={
                 <Link href="/contato">
                   {content.primaryCta}
@@ -35,6 +36,7 @@ export function Hero({ content }: { content: HomeContent["hero"] }) {
             <Button
               size="lg"
               variant="outline"
+              nativeButton={false}
               render={
                 <a
                   href={`https://wa.me/${siteConfig.whatsapp}?text=${whatsappMessage}`}

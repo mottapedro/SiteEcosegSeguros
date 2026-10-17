@@ -40,8 +40,11 @@ export function Header() {
         <Button
           size="sm"
           className="hidden sm:inline-flex"
+          nativeButton={false}
           render={<Link href="/contato">Solicitar diagnóstico</Link>}
-        />
+        >
+          Solicitar diagnóstico
+        </Button>
       </div>
     </header>
   );
