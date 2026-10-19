@@ -1,86 +1,115 @@
-import { useId } from "react";
+import React, { useId } from "react";
+
+export type LogoVariant = "primary" | "stacked" | "symbol-only" | "seal";
+export type SymbolFinish = "brass" | "platinum" | "carbon" | "emerald";
 
 interface EcoSegLogoProps {
+  variant?: LogoVariant;
   size?: number;
-  finish?: "brass" | "platinum";
+  finish?: SymbolFinish;
   tagline?: string;
+  className?: string;
 }
 
-export function EcoSegLogo({
+export const EcoSegLogo: React.FC<EcoSegLogoProps> = ({
+  variant = "primary",
   size = 36,
   finish = "brass",
-  tagline = "PLANEJAMENTO & PROTEÇÃO PATRIMONIAL",
-}: EcoSegLogoProps) {
-  const gradientId = `ecoseg-logo-${finish}-${useId().replace(/:/g, "")}`;
-  const colors =
-    finish === "platinum"
-      ? {
-          highlight: "#F8FAFC",
-          mid: "#CBD5E1",
-          shadow: "#94A3B8",
-        }
-      : {
-          highlight: "#E2CEB3",
-          mid: "#C5A880",
-          shadow: "#9E7F55",
-        };
+  tagline,
+  className = "",
+}) => {
+  const instanceId = useId().replace(/:/g, "");
+  const gradientId = `ecoseg-grad-${finish}-${instanceId}`;
+  const glowId = `ecoseg-glow-${instanceId}`;
+
+  const renderGradients = () => {
+    switch (finish) {
+      case "platinum":
+        return (
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#E2E8F0" />
+            <stop offset="50%" stopColor="#CBD5E1" />
+            <stop offset="100%" stopColor="#94A3B8" />
+          </linearGradient>
+        );
+      case "carbon":
+        return (
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#475569" />
+            <stop offset="100%" stopColor="#0F172A" />
+          </linearGradient>
+        );
+      case "emerald":
+        return (
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#34D399" />
+            <stop offset="100%" stopColor="#059669" />
+          </linearGradient>
+        );
+      case "brass":
+      default:
+        return (
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#F5D77F" />
+            <stop offset="40%" stopColor="#D4AF37" />
+            <stop offset="70%" stopColor="#AA820A" />
+            <stop offset="100%" stopColor="#785A00" />
+          </linearGradient>
+        );
+    }
+  };
+
+  const SymbolSVG = (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="shrink-0"
+      aria-hidden="true"
+    >
+      <defs>
+        {renderGradients()}
+        <filter id={glowId} x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+
+      <rect x="18" y="72" width="64" height="6" rx="3" fill={`url(#${gradientId})`} />
+      <path
+        d="M 22 66 C 22 36, 78 36, 78 66"
+        stroke={`url(#${gradientId})`}
+        strokeWidth="6"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <polygon
+        points="50,22 58,34 50,46 42,34"
+        fill={`url(#${gradientId})`}
+        filter={`url(#${glowId})`}
+      />
+    </svg>
+  );
+
+  if (variant === "symbol-only") {
+    return <div className={`inline-flex items-center ${className}`}>{SymbolSVG}</div>;
+  }
 
   return (
-    <span className="inline-flex items-center gap-3">
-      <svg
-        width={size}
-        height={size}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0"
-        aria-hidden="true"
-      >
-        <defs>
-          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor={colors.highlight} />
-            <stop offset="50%" stopColor={colors.mid} />
-            <stop offset="100%" stopColor={colors.shadow} />
-          </linearGradient>
-        </defs>
-
-        <rect
-          x="20"
-          y="74"
-          width="60"
-          height="5.6"
-          rx="1.5"
-          fill={`url(#${gradientId})`}
-        />
-        <rect
-          x="20"
-          y="22"
-          width="5.6"
-          height="52"
-          rx="1.5"
-          fill={`url(#${gradientId})`}
-        />
-        <path
-          d="M 20 28 C 20 28, 50 16, 76 28 C 82 31, 82 38, 76 42 C 68 47, 46 47, 36 52 C 26 57, 26 68, 38 72 C 48 75, 68 75, 78 72"
-          stroke={`url(#${gradientId})`}
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <polygon points="50,44 56,50 50,56 44,50" fill={colors.highlight} opacity="0.9" />
-        <circle cx="72" cy="30" r="2" fill={colors.mid} />
-      </svg>
-
-      <span className="flex flex-col justify-center">
-        <span className="text-foreground font-sans text-[17px] leading-none font-bold tracking-[0.24em]">
-          ECOSEG
+    <div className={`inline-flex items-center gap-3.5 select-none ${className}`}>
+      {SymbolSVG}
+      <div className="flex flex-col">
+        <div className="flex items-baseline tracking-tight">
+          <span className="text-xl font-extrabold tracking-tight text-white">ECO</span>
+          <span className="text-xl font-light tracking-tight text-neutral-300">SEG</span>
+          <span className="ml-1 font-mono text-[9px] font-bold text-amber-400">®</span>
+        </div>
+        <span className="font-mono text-[9px] tracking-widest text-neutral-400 uppercase">
+          {tagline || "Inteligência & Proteção Patrimonial"}
         </span>
-        {tagline ? (
-          <span className="mt-1.5 text-[8px] leading-none font-medium tracking-[0.26em] text-[#C5A880] uppercase">
-            {tagline}
-          </span>
-        ) : null}
-      </span>
-    </span>
+      </div>
+    </div>
   );
-}
+};

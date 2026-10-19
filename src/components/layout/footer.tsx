@@ -4,19 +4,21 @@ import { siteConfig } from "@/lib/seo/config";
 
 const FOOTER_COLUMNS = [
   {
-    title: "Serviços",
+    title: "Palestra",
     links: [
-      { href: "/servicos/blindagem-patrimonial", label: "Blindagem Patrimonial" },
-      { href: "/servicos/responsabilidade-civil", label: "Responsabilidade Civil" },
-      { href: "/servicos", label: "Consultoria em Riscos" },
+      { href: "/palestra/protecao-familia-militar", label: "Palestra Militar" },
+      { href: "/#metodologia", label: "Metodologia Consultiva" },
+      { href: "/#diagnostico", label: "Diagnóstico Consultivo" },
     ],
   },
   {
-    title: "Empresa",
+    title: "EcoSeg",
     links: [
-      { href: "/empresa", label: "Sobre a EcoSeg" },
-      { href: "/blog", label: "Blog" },
       { href: "/contato", label: "Contato" },
+      {
+        href: "/palestra/protecao-familia-militar/solucoes",
+        label: "Produtos & Soluções",
+      },
     ],
   },
 ];
