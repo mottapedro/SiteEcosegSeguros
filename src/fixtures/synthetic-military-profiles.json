@@ -1,0 +1,102 @@
+[
+  {
+    "id": "fixture-prof-fab-001",
+    "fullName": "Suboficial R1 Carlos Alberto Menezes (Sintético)",
+    "phone": "(21) 98452-0001",
+    "email": "carlos.menezes.fixture@cta.mil.br",
+    "militaryBranch": "FAB",
+    "rankCategory": "Suboficial Taifeiro",
+    "militaryStatus": "reserva",
+    "age": 62,
+    "grossIncome": 11850.0,
+    "hasSingleDaughterOver24": true,
+    "daughterAge": 26,
+    "contributesExtraOnePointFive": false,
+    "hasSpouse": true,
+    "spouseAge": 59,
+    "numberOfDependents": 2,
+    "hasElderlyInHousehold": true,
+    "mainConcern": "pensao_filhas_lei_13954",
+    "legalExposure": {
+      "stfTheme1175Bound": true,
+      "lei13954Loss": "Extinção da pensão vitalícia para filha maior sem recolhimento prévio de 1,5%",
+      "funsaImpact": "Exclusão de dependente maior de 21 anos não universitário"
+    },
+    "recommendedCapital": 750000.0
+  },
+  {
+    "id": "fixture-prof-eb-002",
+    "fullName": "Capitão EB Roberto Silveira (Sintético)",
+    "phone": "(21) 97123-0002",
+    "email": "roberto.silveira.fixture@eb.mil.br",
+    "militaryBranch": "EXERCITO",
+    "rankCategory": "Capitão",
+    "militaryStatus": "ativa",
+    "age": 39,
+    "grossIncome": 14200.0,
+    "hasSingleDaughterOver24": false,
+    "daughterAge": 8,
+    "contributesExtraOnePointFive": true,
+    "hasSpouse": true,
+    "spouseAge": 37,
+    "numberOfDependents": 3,
+    "hasElderlyInHousehold": false,
+    "mainConcern": "invalidez_e_amparo_familiar",
+    "legalExposure": {
+      "stfTheme1175Bound": false,
+      "lei13954Loss": "Elevação de alíquota previdenciária de 3,5% para 10,5% e pedágio de tempo de serviço",
+      "funsaImpact": "Manutenção regular enquanto filhos forem menores"
+    },
+    "recommendedCapital": 1000000.0
+  },
+  {
+    "id": "fixture-prof-mb-003",
+    "fullName": "Primeiro-Sargento MB Anderson Duarte (Sintético)",
+    "phone": "(21) 98844-0003",
+    "email": "anderson.duarte.fixture@mb.mil.br",
+    "militaryBranch": "MARINHA",
+    "rankCategory": "Primeiro-Sargento",
+    "militaryStatus": "reserva",
+    "age": 53,
+    "grossIncome": 9650.0,
+    "hasSingleDaughterOver24": true,
+    "daughterAge": 22,
+    "contributesExtraOnePointFive": false,
+    "hasSpouse": true,
+    "spouseAge": 51,
+    "numberOfDependents": 2,
+    "hasElderlyInHousehold": false,
+    "mainConcern": "saude_fusma_e_renda_corrosao",
+    "legalExposure": {
+      "stfTheme1175Bound": true,
+      "lei13954Loss": "Descredenciamento iminente de dependente universitário ao completar 24 anos",
+      "funsaImpact": "Coparticipação hospitalar majorada"
+    },
+    "recommendedCapital": 500000.0
+  },
+  {
+    "id": "fixture-prof-pen-004",
+    "fullName": "Dona Alzira Souza (Pensionista Sintética)",
+    "phone": "(21) 99655-0004",
+    "email": "alzira.souza.fixture@cta.org.br",
+    "militaryBranch": "FAB",
+    "rankCategory": "Viúva de Suboficial",
+    "militaryStatus": "pensionista",
+    "age": 71,
+    "grossIncome": 8200.0,
+    "hasSingleDaughterOver24": false,
+    "daughterAge": null,
+    "contributesExtraOnePointFive": false,
+    "hasSpouse": false,
+    "spouseAge": null,
+    "numberOfDependents": 1,
+    "hasElderlyInHousehold": true,
+    "mainConcern": "sucessao_sem_inventario_art_794",
+    "legalExposure": {
+      "stfTheme1175Bound": true,
+      "lei13954Loss": "Cobrança de contribuição previdenciária de pensionista anteriormente isenta",
+      "funsaImpact": "Necessidade de apólice privada com liquidez em 72h para despesas de funeral e sucessão"
+    },
+    "recommendedCapital": 250000.0
+  }
+]

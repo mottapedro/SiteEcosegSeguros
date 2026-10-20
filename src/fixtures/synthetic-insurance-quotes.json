@@ -1,0 +1,145 @@
+[
+  {
+    "fixtureId": "fixture-quote-icatu-01",
+    "insurerId": "icatu",
+    "insurerName": "Icatu Seguros S/A",
+    "cnpj": "42.283.770/0001-39",
+    "quoteProtocol": "QUOTE-ICATU-2026-FIXTURE-8921",
+    "susepProcessNumber": "15414.900821/2019-11",
+    "productName": "Icatu Vida & Planejamento Sucessório Militar",
+    "profileRef": "fixture-prof-fab-001",
+    "insuredAge": 62,
+    "capitalInsured": 750000.0,
+    "pricing": {
+      "netMonthlyPremium": 234.8,
+      "iofRate": 0.0038,
+      "iofAmount": 0.89,
+      "grossMonthlyPremium": 235.69,
+      "annualizedPremium": 2828.28,
+      "currency": "BRL"
+    },
+    "coverages": [
+      {
+        "code": "MORTE_QUALQUER_CAUSA",
+        "description": "Morte Natural ou Acidental (Indenização em até 72h)",
+        "capital": 750000.0,
+        "isMandatory": true,
+        "isDirectInheritanceExempt": true
+      },
+      {
+        "code": "SOBREVIVENCIA_RENDA",
+        "description": "Renda Programada para Filhas (Resgate ou Renda Mensal)",
+        "capital": 350000.0,
+        "isMandatory": false,
+        "isDirectInheritanceExempt": true
+      }
+    ],
+    "underwritingNotes": {
+      "dpsType": "simplificada",
+      "maxAdmissionAge": 70,
+      "gracePeriodNaturalDeathDays": 90,
+      "gracePeriodAccidentDays": 0,
+      "article794CivilCodeShielded": true
+    },
+    "security": {
+      "environment": "sandbox_local",
+      "digitalSignatureHash": "sha256:d8a9f24b81c2e6f47701bc9390ea00a12f5349db82a871542fbe5c8c6340f1a9",
+      "certificateAuthority": "SUSEP-ICP-BRASIL-ICATU-FIXTURE",
+      "serverTimestamp": "2026-10-20T12:00:00Z",
+      "validUntil": "2026-11-20T23:59:59Z"
+    }
+  },
+  {
+    "fixtureId": "fixture-quote-mag-02",
+    "insurerId": "mag",
+    "insurerName": "MAG Seguros (Mongeral Aegon)",
+    "cnpj": "33.608.308/0001-73",
+    "quoteProtocol": "QUOTE-MAG-2026-FIXTURE-4182",
+    "susepProcessNumber": "15414.900542/2018-84",
+    "productName": "MAG Master Militar Acidentes e Invalidez Funcional",
+    "profileRef": "fixture-prof-eb-002",
+    "insuredAge": 39,
+    "capitalInsured": 1000000.0,
+    "pricing": {
+      "netMonthlyPremium": 142.1,
+      "iofRate": 0.0038,
+      "iofAmount": 0.54,
+      "grossMonthlyPremium": 142.64,
+      "annualizedPremium": 1711.68,
+      "currency": "BRL"
+    },
+    "coverages": [
+      {
+        "code": "INVALIDEZ_FUNCIONAL_ILPD",
+        "description": "Invalidez Funcional Permanente Total por Doença ou Acidente",
+        "capital": 1000000.0,
+        "isMandatory": true,
+        "isDirectInheritanceExempt": true
+      },
+      {
+        "code": "MORTE_ACIDENTAL_DOBRO",
+        "description": "Indenização Especial por Acidente em Serviço ou Trânsito",
+        "capital": 1000000.0,
+        "isMandatory": true,
+        "isDirectInheritanceExempt": true
+      }
+    ],
+    "underwritingNotes": {
+      "dpsType": "simplificada",
+      "maxAdmissionAge": 65,
+      "gracePeriodNaturalDeathDays": 60,
+      "gracePeriodAccidentDays": 0,
+      "article794CivilCodeShielded": true
+    },
+    "security": {
+      "environment": "sandbox_local",
+      "digitalSignatureHash": "sha256:5e8b4a2c1f9d3e7b6a0c4e8f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+      "certificateAuthority": "SUSEP-ICP-BRASIL-MAG-FIXTURE",
+      "serverTimestamp": "2026-10-20T12:00:00Z",
+      "validUntil": "2026-11-20T23:59:59Z"
+    }
+  },
+  {
+    "fixtureId": "fixture-quote-gboex-03",
+    "insurerId": "gboex",
+    "insurerName": "GBOEX Previdência e Pecúlio",
+    "cnpj": "92.784.808/0001-44",
+    "quoteProtocol": "QUOTE-GBOEX-2026-FIXTURE-7719",
+    "susepProcessNumber": "15414.004218/2005-19",
+    "productName": "GBOEX Força Ativa & Pecúlio Militar CTA",
+    "profileRef": "fixture-prof-mb-003",
+    "insuredAge": 53,
+    "capitalInsured": 500000.0,
+    "pricing": {
+      "netMonthlyPremium": 188.5,
+      "iofRate": 0.0038,
+      "iofAmount": 0.72,
+      "grossMonthlyPremium": 189.22,
+      "annualizedPremium": 2270.64,
+      "currency": "BRL"
+    },
+    "coverages": [
+      {
+        "code": "PECULIO_MORTE",
+        "description": "Pecúlio Tradicional Imediato sem Inventário Judicial",
+        "capital": 500000.0,
+        "isMandatory": true,
+        "isDirectInheritanceExempt": true
+      }
+    ],
+    "underwritingNotes": {
+      "dpsType": "simplificada",
+      "maxAdmissionAge": 75,
+      "gracePeriodNaturalDeathDays": 90,
+      "gracePeriodAccidentDays": 0,
+      "article794CivilCodeShielded": true
+    },
+    "security": {
+      "environment": "sandbox_local",
+      "digitalSignatureHash": "sha256:9c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d",
+      "certificateAuthority": "SUSEP-ICP-BRASIL-GBOEX-FIXTURE",
+      "serverTimestamp": "2026-10-20T12:00:00Z",
+      "validUntil": "2026-11-20T23:59:59Z"
+    }
+  }
+]
