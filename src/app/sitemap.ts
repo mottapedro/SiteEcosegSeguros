@@ -3,10 +3,8 @@ import { siteConfig } from "@/lib/seo/config";
 
 const ROUTES = [
   "",
-  "/empresa",
-  "/servicos",
-  "/servicos/blindagem-patrimonial",
-  "/servicos/responsabilidade-civil",
+  "/palestra/protecao-familia-militar",
+  "/palestra/protecao-familia-militar/solucoes",
   "/contato",
 ];
 

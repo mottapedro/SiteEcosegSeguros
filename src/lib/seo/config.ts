@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "(21) 99469-3673",
   whatsapp: "5521994693673",
   whatsappUrl: "https://wa.me/5521994693673",
-  email: "contato@ecoseg.com.br",
+  email: "ecoseg@yahoo.com",
   address:
     "Rio de Janeiro, RJ · Base Operacional Clube dos Taifeiros da Aeronáutica (CTA)",
   locale: "pt_BR",

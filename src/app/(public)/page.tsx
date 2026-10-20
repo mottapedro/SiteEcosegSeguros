@@ -7,6 +7,7 @@ import { Partners } from "@/components/sections/partners";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Cta } from "@/components/sections/cta";
 import { Contact } from "@/components/sections/contact";
+import { MilitarySolutionCards } from "@/components/presentation/military-solution-cards";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/seo/config";
 
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero content={content.hero} />
       <Products content={content.products} />
       <Differentials content={content.differentials} />
+      <MilitarySolutionCards />
       <Partners content={content.partners} />
       <Testimonials content={content.testimonials} />
       <Cta content={content.cta} />

@@ -1,3 +1,8 @@
+/**
+ * Contrato de Integração API: Site Público ECOSEG ➔ Plataforma Privada Cyborg Intelligence
+ * Em conformidade com ADR 0005 (Seção 6) e ADR 0007.
+ */
+
 export interface LeadIngestionPayload {
   leadSource: "palestra_cta_2026" | "site_home" | "vertical_militar" | "qr_code_telao";
   fullName: string;
@@ -17,7 +22,7 @@ export interface LeadIngestionPayload {
   lgpdConsent: {
     accepted: boolean;
     timestamp: string;
-    legalBasis: string;
+    legalBasis: string; // Ex: 'Art. 7, V e IX da Lei 13.709/2018'
     policyVersion: string;
   };
 }
@@ -28,7 +33,7 @@ export interface LeadIngestionResponse {
   queueStatus: "enfileirado_para_consultor" | "em_atendimento" | "duplicado";
   assignedConsultant: {
     name: string;
-    officeLocation: string;
+    officeLocation: string; // 'Base Operacional CTA-RJ'
   };
   trackingCode: string;
   timestamp: string;

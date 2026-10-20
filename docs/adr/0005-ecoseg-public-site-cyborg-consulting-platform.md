@@ -149,36 +149,66 @@ Nenhum contrato com a ECOSEG implica cessão automática de código-fonte ou exc
 
 ## 4.3 Como a palestra será representada
 
-A palestra será uma experiência web própria, não uma sequência improvisada da Home.
+A palestra será uma experiência web própria e também suportada por apresentação estruturada (PPTX e modo apresentação interativo), não uma sequência improvisada da Home.
 
-Rota inicial:
+**Título Oficial da Palestra:**
+
+> _“Lei nº 13.954/2019 — Perdas e consequências!”_
+
+**Local do Evento Inaugural:**
+
+> Clube dos Taifeiros da Aeronáutica (CTA) — Rio de Janeiro, RJ.
+
+Rota inicial no site público:
 
 ```text
 /palestra/protecao-familia-militar
 ```
 
-A página possuirá:
+A experiência possuirá:
 
-- modo normal, acessível antes e depois do evento;
-- modo apresentação, em tela cheia e com navegação simples;
-- roteiro visual alinhado à fala do João;
-- fontes e notas de atualização;
-- QR Code para o diagnóstico inicial;
-- possibilidade futura de identificar evento/campanha sem expor dados do participante.
+- **Modo Apresentação (PPTX & Telão)**: Guia e roteiro de fala para João Brito e equipe, em estética Obsidian Navy e Imperial Brass, com notas de orador, cronômetro e 6 atos estruturados.
+- **Página Pública da Palestra (Público & Celular)**: Apresentação do roteiro oficial e **Cards Interativos de Soluções** para o público suprir as ausências de direitos decorrentes da legislação.
+- **QR Code & Link Direto**: Conduzindo a platéia do telão para a página de diagnóstico individual.
 
-Narrativa oficial:
+### Os 4 Pilares de Perdas Legais Abordados na Palestra:
+
+1. **Perda da Assistência Médica aos Dependentes (FUNSA / SISAU / SARAM)**:
+   - _Norma:_ Art. 50, § 2º da Lei nº 6.880/1980, com a redação restritiva dada pela Lei nº 13.954/2019.
+   - _Consequência:_ Exclusão de filhos maiores de 21 anos e dependentes do plano de saúde da Aeronáutica.
+2. **Perda da Pensão Militar das Filhas**:
+   - _Norma:_ Artigo 31 da Medida Provisória nº 2.215-10/2001 e Lei nº 3.765/1960.
+   - _Consequência:_ Fim da vitaliciedade automática; direito preservado exclusivamente para quem comprovadamente recolhe o 1,5% específico da regra de transição temporal.
+3. **Perda do Adicional de 41% e Coisa Julgada (STF Tema 1175)**:
+   - _Norma:_ Lei nº 13.954/2019 (Anexo II), STF Tema 1175 (ARE 1.341.061) e LINDB (Dec.-Lei nº 4.657/42, Art. 6º).
+   - _Consequência:_ Decisão judicial definitiva pacificando que o Judiciário não pode estender percentuais máximos por isonomia. _"Não cabe mais recurso"_, encerrando as ilusões de litígio judicial.
+4. **Isenção de Imposto de Renda e Previdência**:
+   - _Norma:_ Lei nº 7.713/1988 para militares reformados portadores de moléstias elegíveis.
+
+### Cards de Soluções Apresentados no Site (Homologados via ADR 0006):
+
+| Perda Legal Decorrente da Lei nº 13.954                         | Solução Estruturada ECOSEG                                                                                                                                 | Seguradora Parceira              | SUSEP / Registro                                |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
+| **Fim da Pensão Vitalícia das Filhas** (sem opção 1,5%)         | **Equilíbrio (Whole Life)**: R$ 500k+ de capital + Reserva Financeira (2% a.a. + IPCA + excedente). Sem ITCMD/inventário.                                  | **Icatu Seguros**                | `154149010412014-34`                            |
+| **Proteção Centenária Exclusiva da Família Militar**            | **Força Ativa Resgatável & Tradicional**: Pecúlio e reserva programada para praças, taifeiros, sargentos e oficiais.                                       | **GBOEX** (desde 1913)           | `15414.900658/2017-85` e `15414.002185/2008-68` |
+| **Custo e Bloqueio no Inventário Judicial** (perda de até 23%)  | **Horizonte (Vida Resgatável Nivelado)**: Quitação flexível em 5 a 20 anos, parcelas que não aumentam com a idade, 24 doenças graves e liquidez em vida.   | **Icatu Seguros**                | `15414.611834/2025-17`                          |
+| **Confisco de 10,5% na Pensão e Reserva** (Art. 3º-A Lei 3.765) | **Previdência Privada com Compra de Renda**: Fundo sem come-cotas, alíquota de 10% (regressiva) e conversão em Renda Vitalícia Reversível à pensionista.   | **Icatu Seguros**                | PGBL / VGBL Regressivo                          |
+| **Vulnerabilidade e Quedas na Terceira Idade** (> 60 anos)      | **Master Acidentes Domiciliares**: Internação hospitalar, fraturas e Assistência Check-Up Lar (instalação de barras em banheiros e fitas antiderrapantes). | **MAG Seguros** (Mongeral Aegon) | `15414.606228/2020-75`                          |
+| **Transição de Carreira & Auditoria de Proventos**              | **Planejamento Previdenciário Consultivo**: Diagnóstico individual de carreira, tempo de serviço, adicionais e averbações.                                 | **Consultoria Especializada**    | Base Operacional CTA-RJ                         |
+
+**Canal Oficial de Atendimento e Cotações:** WhatsApp/Telefone **(21) 99469-3673** | `contato@ecoseg.com.br` | Rio de Janeiro, RJ (CTA).
+
+Narrativa oficial governada (M1-R03):
 
 ```text
-Expectativa da família
-→ mudança jurídica
-→ proteção existente
-→ possível lacuna
-→ diagnóstico
-→ categoria de solução
-→ atendimento individual
+Abertura (Lei 13.954/19)
+→ Contexto (FUNSA e corte de dependentes)
+→ Evidência (Pensão das filhas MP 2.215 e STF Tema 1175)
+→ Virada ("E agora? Não cabe mais recurso")
+→ Método ECOSEG
+→ Opções de Produtos (Cards no Site)
+→ Diagnóstico Confidencial no CTA
 ```
-
-A palestra não recomendará automaticamente um produto específico nem prometerá direito, cobertura, aprovação ou resultado.
 
 ## 4.4 Governança do conteúdo jurídico
 
@@ -566,7 +596,6 @@ Afeta futuramente:
 ---
 
 © ECOSEG / Cyborg Tecnologia
-
 
 ---
 

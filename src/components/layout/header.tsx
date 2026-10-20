@@ -1,123 +1,128 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+"use client";
 
-const NAV_LINKS = [
+import React, { useState } from "react";
+import Link from "next/link";
+import { EcoSegLogo } from "../brand/EcoSegLogo";
+import { Menu, X, ArrowRight, Phone } from "lucide-react";
+
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+const NAV_LINKS: NavLink[] = [
   { href: "/palestra/protecao-familia-militar", label: "Palestra Militar" },
   { href: "/#metodologia", label: "Metodologia Consultiva" },
-  { href: "/#sobre", label: "Sobre a EcoSeg" },
+  { href: "/#diagnostico", label: "Diagnóstico Consultivo" },
   { href: "/contato", label: "Contato" },
 ];
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-neutral-800/80 bg-[#080D14]/95 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        {/* Marca Oficial EcoSeg — Alinhamento Ótico no Eixo Y */}
+    <header className="sticky top-0 z-50 w-full border-b border-neutral-800/80 bg-[#080D14]/95 backdrop-blur-md">
+      {/* Container Principal: Eixo X e Y com respiro arquitetural nobre */}
+      <div className="mx-auto flex h-18 w-full max-w-[1600px] items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        {/* Zona 1 (Esquerda): Marca Oficial EcoSeg — Alinhamento Ótico Seguro */}
         <Link
           href="/"
-          className="group flex items-center gap-3 transition-opacity hover:opacity-95"
+          className="group flex shrink-0 items-center transition-opacity hover:opacity-95"
           aria-label="EcoSeg — Planejamento e Proteção Patrimonial"
         >
-          {/* Símbolo Arquitetônico Vetorial Puro (38x38px ótico) */}
-          <svg
-            width="38"
-            height="38"
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="shrink-0 transition-transform duration-300 group-hover:scale-105"
-            aria-hidden="true"
-          >
-            <defs>
-              <linearGradient id="header-brass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#E2CEB3" />
-                <stop offset="50%" stopColor="#C5A880" />
-                <stop offset="100%" stopColor="#9E7F55" />
-              </linearGradient>
-            </defs>
-
-            {/* 1. Viga Estrutural Inferior */}
-            <rect
-              x="20"
-              y="74"
-              width="60"
-              height="5.6"
-              rx="1.5"
-              fill="url(#header-brass-grad)"
-            />
-
-            {/* 2. Coluna Vertical Esquerda */}
-            <rect
-              x="20"
-              y="22"
-              width="5.6"
-              height="52"
-              rx="1.5"
-              fill="url(#header-brass-grad)"
-            />
-
-            {/* 3. Arco de Horizonte & Curvas de Retorno */}
-            <path
-              d="M 20 28 C 20 28, 50 16, 76 28 C 82 31, 82 38, 76 42 C 68 47, 46 47, 36 52 C 26 57, 26 68, 38 72 C 48 75, 68 75, 78 72"
-              stroke="url(#header-brass-grad)"
-              strokeWidth="5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-            />
-
-            {/* 4. Pivô Central em Diamante */}
-            <polygon points="50,44 56,50 50,56 44,50" fill="#E2CEB3" opacity="0.9" />
-
-            {/* 5. Acento do Meridiano Superior */}
-            <circle cx="72" cy="30" r="2" fill="#C5A880" />
-          </svg>
-
-          {/* Tipografia da Marca com Altura e Espaçamento Calibrados */}
-          <div className="flex flex-col justify-center">
-            <span className="font-sans text-[17px] leading-none font-bold tracking-[0.24em] text-white">
-              ECOSEG
-            </span>
-            <span className="mt-1.5 text-[8px] leading-none font-medium tracking-[0.26em] text-[#C5A880] uppercase">
-              Planejamento & Proteção Patrimonial
-            </span>
-          </div>
+          <EcoSegLogo
+            size={38}
+            finish="brass"
+            tagline="PLANEJAMENTO & PROTEÇÃO PATRIMONIAL"
+          />
         </Link>
 
-        {/* Menu de Navegação Perfeitamente Alinhado no Eixo Y */}
+        {/* Zona 2 (Centro): Menu de Navegação em Linha Única sem quebra de texto */}
         <nav
-          className="hidden h-full items-center gap-8 lg:flex"
+          className="hidden h-full flex-1 items-center justify-center gap-5 px-6 lg:flex xl:gap-8 xl:px-12 2xl:gap-10"
           aria-label="Navegação principal"
         >
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="flex items-center text-xs leading-none font-semibold tracking-wider text-neutral-300 uppercase transition-colors hover:text-white"
+              className="relative py-2 text-[11px] font-semibold tracking-wider whitespace-nowrap text-neutral-300 uppercase transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#C5A880] after:transition-all hover:text-white hover:after:w-full xl:text-xs"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* Ações da Direita com Alinhamento na Mesma Linha de Centro */}
-        <div className="flex items-center gap-3">
+        {/* Zona 3 (Direita): Ações Primárias & Secundárias */}
+        <div className="flex shrink-0 items-center gap-2.5 sm:gap-3">
           <Link
             href="/palestra/protecao-familia-militar/apresentacao"
-            className="hidden items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-xs leading-none font-semibold text-neutral-300 transition-colors hover:bg-neutral-800 hover:text-white sm:inline-flex"
+            className="hidden items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900/90 px-3.5 py-2 text-xs font-semibold whitespace-nowrap text-neutral-200 shadow-sm transition-all hover:bg-neutral-800 hover:text-white sm:py-2.5 xl:inline-flex xl:px-4"
           >
             Modo Apresentação
           </Link>
-          <Button
-            size="sm"
-            className="flex cursor-pointer items-center justify-center rounded-xl bg-[#C5A880] px-4 py-2.5 text-xs leading-none font-bold text-[#080D14] shadow-sm shadow-[#C5A880]/20 transition-all hover:bg-[#b5966c]"
-            nativeButton={false}
-            render={<Link href="/contato">Agendar Diagnóstico</Link>}
+
+          <Link
+            href="/contato"
+            className="inline-flex cursor-pointer items-center justify-center rounded-xl bg-[#C5A880] px-4 py-2 text-xs font-bold whitespace-nowrap text-[#080D14] shadow-md shadow-[#C5A880]/20 transition-all hover:bg-[#b5966c] active:scale-95 sm:py-2.5 xl:px-5"
           >
             Agendar Diagnóstico
-          </Button>
+          </Link>
+
+          {/* Botão Hambúrguer Mobile/Tablet (lg:hidden) */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="inline-flex cursor-pointer items-center justify-center rounded-xl border border-neutral-800 p-2 text-neutral-400 transition-colors hover:bg-neutral-900 hover:text-white lg:hidden"
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? (
+              <X className="h-5 w-5 text-neutral-200" />
+            ) : (
+              <Menu className="h-5 w-5 text-neutral-200" />
+            )}
+          </button>
         </div>
       </div>
+
+      {/* Menu Dropdown Mobile / Tablet com Espaçamento X/Y e Toque Confortável */}
+      {mobileMenuOpen && (
+        <div className="animate-in fade-in-0 border-t border-neutral-800 bg-[#080D14]/98 px-4 py-5 backdrop-blur-2xl duration-200 lg:hidden">
+          <div className="flex flex-col space-y-1">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="border-neutral-850 flex items-center justify-between rounded-lg border-b px-3 py-3 text-xs font-semibold tracking-wider text-neutral-300 uppercase transition-colors last:border-b-0 hover:bg-neutral-900/60 hover:text-white"
+              >
+                <span>{link.label}</span>
+                <ArrowRight className="h-3.5 w-3.5 text-neutral-500" />
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-2 flex flex-col gap-2.5 border-t border-neutral-800 pt-4">
+            <Link
+              href="/palestra/protecao-familia-militar/apresentacao"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900 px-4 py-2.5 text-center text-xs font-semibold text-neutral-200 transition-colors hover:bg-neutral-800"
+            >
+              Modo Apresentação (Palestra CTA)
+            </Link>
+            <a
+              href="https://wa.me/5521994693673"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 py-2 font-mono text-xs text-neutral-400 transition-colors hover:text-emerald-400"
+            >
+              <Phone className="h-3.5 w-3.5 text-emerald-400" />
+              <span>WhatsApp: (21) 99469-3673</span>
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
