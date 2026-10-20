@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   }),
   metadataBase: new URL(siteConfig.url),
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.ico" }],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: "/favicon.svg",
   },
 };
