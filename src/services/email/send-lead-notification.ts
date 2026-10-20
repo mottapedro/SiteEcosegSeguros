@@ -5,8 +5,11 @@ import type { ContactFormValues } from "@/features/contact-form/schema";
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 const INTEREST_LABELS: Record<ContactFormValues["interest"], string> = {
-  "blindagem-patrimonial": "Blindagem Patrimonial",
-  "responsabilidade-civil": "Responsabilidade Civil",
+  "protecao-militar-13954": "Proteção da Família Militar (Lei nº 13.954/2019)",
+  "pensao-filhas-whole-life": "Pensão de Filhas Whole Life",
+  "confisco-10-5-previdencia": "Reposição do Confisco de 10,5% na Reserva / Pensão",
+  "blindagem-patrimonial-sucessoria": "Blindagem Patrimonial & Anti-Inventário",
+  "responsabilidade-civil": "Responsabilidade Civil Profissional",
   outro: "Outro assunto",
 };
 

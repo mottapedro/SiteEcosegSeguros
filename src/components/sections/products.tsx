@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Section } from "./section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { EcoSegLogo } from "@/components/brand/EcoSegLogo";
 import type { HomeContent } from "@/content/types";
 
 export function Products({ content }: { content: HomeContent["products"] }) {
@@ -21,7 +22,7 @@ export function Products({ content }: { content: HomeContent["products"] }) {
           <Card key={product.slug} className="shadow-none">
             <CardHeader>
               <div className="text-accent flex items-center gap-2">
-                <ShieldCheck className="size-5" aria-hidden />
+                <EcoSegLogo variant="symbol-only" size={20} finish="brass" />
                 <span className="text-xs font-semibold tracking-wide uppercase">
                   {product.tagline}
                 </span>
@@ -59,10 +60,10 @@ export function Products({ content }: { content: HomeContent["products"] }) {
               </p>
 
               <Link
-                href={`/servicos/${product.slug}`}
+                href="/palestra/protecao-familia-militar"
                 className="text-primary mt-6 inline-flex items-center gap-1.5 text-sm font-semibold hover:underline"
               >
-                Entender {product.name}
+                Conhecer a abordagem EcoSeg
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </CardContent>

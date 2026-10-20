@@ -1,12 +1,13 @@
-import { Compass, HandHeart, Network, ShieldCheck } from "lucide-react";
+import { Compass, HandHeart, Network } from "lucide-react";
 import { Section } from "./section";
 import type { HomeContent } from "@/content/types";
+import { EcoSegLogo } from "@/components/brand/EcoSegLogo";
 
-const ICONS = [Compass, HandHeart, Network, ShieldCheck];
+const ICONS = [Compass, HandHeart, Network];
 
 export function Differentials({ content }: { content: HomeContent["differentials"] }) {
   return (
-    <Section tone="muted">
+    <Section id="metodologia" tone="muted">
       <div className="max-w-2xl">
         <h2 className="text-foreground text-3xl font-bold">Como trabalhamos</h2>
         <p className="text-muted-foreground mt-3">
@@ -19,7 +20,11 @@ export function Differentials({ content }: { content: HomeContent["differentials
           const Icon = ICONS[index % ICONS.length];
           return (
             <div key={item.title}>
-              <Icon className="text-accent size-6" aria-hidden />
+              {index === content.length - 1 ? (
+                <EcoSegLogo variant="symbol-only" size={24} finish="brass" />
+              ) : (
+                <Icon className="text-accent size-6" aria-hidden />
+              )}
               <h3 className="text-foreground mt-4 text-base font-semibold">
                 {item.title}
               </h3>
