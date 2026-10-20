@@ -86,3 +86,127 @@ A oportunidade validada com João amplia a atuação da ECOSEG: deixa de ser ape
 5. **Entrega de dados do diagnóstico:** O lead público envia apenas inputs essenciais com consentimento rastreável para a fila da consultoria.
 6. **Fundamento LGPD:** Coleta minimizada sob o fundamento de execução de procedimentos preliminares a pedido do titular (Art. 7º, V) e legítimo interesse (Art. 7º, IX).
 7. **Corte da V1:** Foco estrito no Marco 0 e M1 — Palestra no CTA-RJ, simulador de lacunas de pensão e geração de dossiês consultivos.
+
+## 6. Conclusão e recomendações
+
+### 6.1. Adoção do OP-002
+
+O OP-002 deve ser adotado como procedimento permanente de implementação da ECOSEG Intelligence.
+
+Sua localização atual é:
+
+```text
+docs/operations/OP-002-ai-studio-local-homologacao-prompts.md
+```
+
+A pasta `docs/operations/` é adequada porque o documento define o fluxo operacional entre AI Studio, ambiente local, homologação, publicação e rollback.
+
+### 6.2. Handoff para o Agent Local
+
+O Agent Local deverá iniciar a implementação utilizando:
+
+- **Prompt C2** — implementação local;
+- **Prompt D1** — revisão técnica local;
+- **Gate D** — lint, build, formatação, fixtures e revisão de contratos.
+
+A execução deverá ocorrer em uma branch de feature, sem alteração direta da `main`.
+
+Exemplo:
+
+```text
+feature/cyborg-license-and-connectors
+```
+
+### 6.3. Estado atual comprovado
+
+O repositório já possui:
+
+- Workspace `/consultor/cyborg`;
+- simulador local de cotação;
+- endpoint local de saúde dos conectores;
+- contratos e documentação técnica;
+- estrutura inicial para integração futura;
+- procedimento OP-002;
+- estudo técnico sobre Open Insurance e APIs SUSEP.
+
+As rotas atualmente comprovadas são:
+
+```text
+/api/insurance-connectors/health
+/api/insurance-connectors/quote
+```
+
+Essas rotas operam em modo:
+
+```text
+sandbox_local
+simulador_local
+```
+
+As rotas abaixo permanecem como contratos-alvo:
+
+```text
+/v1/adherence/evaluate
+/v1/quotes/realtime
+/v1/proposals/submit
+```
+
+Elas somente devem ser classificadas como implementadas após existirem no código, possuírem testes e serem verificadas em homologação.
+
+### 6.4. Bundle local
+
+O arquivo:
+
+```text
+ecoseg-cyborg-local-bundle.tar.gz
+```
+
+deve ser considerado pronto para handoff somente após a conferência de conteúdo.
+
+A validação mínima deve confirmar a presença de:
+
+```text
+OP-002
+ESTUDO-TECNICO-API-SUSEP-OPEN-INSURANCE-SWAGGER.md
+ADRs 0005 a 0009
+contratos TypeScript
+guia de implementação local
+fixtures sintéticas
+```
+
+Comandos sugeridos:
+
+```bash
+tar -tzf ecoseg-cyborg-local-bundle.tar.gz
+sha256sum ecoseg-cyborg-local-bundle.tar.gz
+```
+
+### 6.5. Próximo gate autorizado
+
+O próximo passo é:
+
+```text
+Executar Prompt C2 no ambiente local
+        ↓
+Executar Prompt D1
+        ↓
+Rodar pnpm lint
+        ↓
+Rodar pnpm build
+        ↓
+Gerar Vercel Preview
+        ↓
+Executar Prompts E1 e E2
+```
+
+Até a conclusão desses gates, não devem ser considerados concluídos:
+
+- motor de aderência;
+- integração com seguradoras;
+- cotação oficial;
+- submissão de proposta;
+- emissão de apólice;
+- uso de credenciais reais;
+- integração produtiva com Open Insurance.
+
+Essa versão preserva o valor institucional do OP-002 sem classificar como implementados componentes que ainda estão documentados ou em modo de simulação.

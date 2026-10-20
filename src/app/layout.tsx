@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   }),
   metadataBase: new URL(siteConfig.url),
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.ico" }],
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

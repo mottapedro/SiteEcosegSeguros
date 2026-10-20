@@ -1,0 +1,50 @@
+[
+  {
+    "fixtureCase": "case-cta-fab-valid",
+    "request": {
+      "leadSource": "palestra_cta_2026",
+      "fullName": "Tenente João Carlos da Silva (Sintético)",
+      "phone": "(21) 98765-4321",
+      "email": "joao.carlos.fixture@cta.mil.br",
+      "militaryBranch": "FAB",
+      "rankCategory": "Primeiro-Tenente",
+      "militaryStatus": "reserva",
+      "mainConcern": "pensao_filhas_lei_13954",
+      "grossIncomeEstimated": 12500.0,
+      "notes": "Associado do CTA presente na palestra de 21/10/2026",
+      "lgpdConsent": {
+        "accepted": true,
+        "timestamp": "2026-10-20T10:15:00Z",
+        "legalBasis": "Art. 7, V e IX da Lei 13.709/2018",
+        "policyVersion": "1.0.0"
+      }
+    },
+    "expectedResponse": {
+      "success": true,
+      "queueStatus": "enfileirado_para_consultor",
+      "assignedConsultant": {
+        "id": "cons-joao-brito-cta",
+        "name": "João Brito",
+        "registrationNumber": "SUSEP 2026.04.11-CTA",
+        "officeLocation": "Base Operacional CTA-RJ"
+      },
+      "slaFirstContactHours": 24
+    }
+  },
+  {
+    "fixtureCase": "case-cta-missing-phone-invalid",
+    "request": {
+      "leadSource": "palestra_cta_2026",
+      "fullName": "Militar Incompleto Teste",
+      "phone": "",
+      "militaryBranch": "EB",
+      "rankCategory": "Sargento",
+      "mainConcern": "geral"
+    },
+    "expectedResponse": {
+      "success": false,
+      "errorCode": "MISSING_REQUIRED_FIELDS",
+      "statusCode": 400
+    }
+  }
+]
