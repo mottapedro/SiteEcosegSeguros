@@ -23,11 +23,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-800/80 bg-[#080D14]/95 backdrop-blur-md">
       {/* Container Principal: Eixo X e Y com respiro arquitetural nobre */}
-      <div className="mx-auto flex h-18 w-full max-w-[1600px] items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+      <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between gap-3 px-3 sm:h-20 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* Zona 1 (Esquerda): Marca Oficial EcoSeg — Alinhamento Ótico Seguro */}
         <Link
           href="/"
-          className="group flex shrink-0 items-center transition-opacity hover:opacity-95"
+          className="group hidden shrink-0 items-center transition-opacity hover:opacity-95 sm:flex"
           aria-label="EcoSeg — Planejamento e Proteção Patrimonial"
         >
           <EcoSegLogo
@@ -35,6 +35,17 @@ export function Header() {
             finish="brass"
             tagline="PLANEJAMENTO & PROTEÇÃO PATRIMONIAL"
           />
+        </Link>
+
+        <Link
+          href="/"
+          className="group flex items-center gap-2 transition-opacity hover:opacity-95 sm:hidden"
+          aria-label="EcoSeg — Planejamento e Proteção Patrimonial"
+        >
+          <EcoSegLogo variant="symbol-only" size={34} finish="brass" />
+          <span className="text-base font-bold tracking-[0.18em] text-white">
+            ECOSEG
+          </span>
         </Link>
 
         {/* Zona 2 (Centro): Menu de Navegação em Linha Única sem quebra de texto */}
@@ -64,7 +75,7 @@ export function Header() {
 
           <Link
             href="/contato"
-            className="inline-flex cursor-pointer items-center justify-center rounded-xl bg-[#C5A880] px-4 py-2 text-xs font-bold whitespace-nowrap text-[#080D14] shadow-md shadow-[#C5A880]/20 transition-all hover:bg-[#b5966c] active:scale-95 sm:py-2.5 xl:px-5"
+            className="hidden cursor-pointer items-center justify-center rounded-xl bg-[#C5A880] px-4 py-2 text-xs font-bold whitespace-nowrap text-[#080D14] shadow-md shadow-[#C5A880]/20 transition-all hover:bg-[#b5966c] active:scale-95 lg:inline-flex sm:py-2.5 xl:px-5"
           >
             Agendar Diagnóstico
           </Link>
@@ -104,6 +115,13 @@ export function Header() {
           </div>
 
           <div className="mt-2 flex flex-col gap-2.5 border-t border-neutral-800 pt-4">
+            <Link
+              href="/contato"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center rounded-xl bg-[#C5A880] px-4 py-3 text-center text-xs font-bold text-[#080D14] transition-colors hover:bg-[#b5966c]"
+            >
+              Agendar Diagnóstico
+            </Link>
             <Link
               href="/palestra/protecao-familia-militar/apresentacao"
               onClick={() => setMobileMenuOpen(false)}
