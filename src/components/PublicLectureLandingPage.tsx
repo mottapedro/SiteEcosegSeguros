@@ -18,21 +18,18 @@ import {
   Clock,
   Sparkles,
   ExternalLink,
-  Presentation,
-  Play
+  Presentation
 } from 'lucide-react';
 import { generateMobileSpeakerGuidePdf } from '../services/pdfGenerator';
 import { generatePptx } from '../services/pptxGenerator';
 
 interface PublicLectureLandingPageProps {
   onOpenPresentation: () => void;
-  onNavigateToStudio?: () => void;
   showFooter?: boolean;
 }
 
 export const PublicLectureLandingPage: React.FC<PublicLectureLandingPageProps> = ({
   onOpenPresentation,
-  onNavigateToStudio,
   showFooter = false,
 }) => {
   const [selectedForce, setSelectedForce] = useState<string>('FAB');
@@ -65,8 +62,8 @@ export const PublicLectureLandingPage: React.FC<PublicLectureLandingPageProps> =
 
   return (
     <div className="min-h-screen bg-[#080D14] text-neutral-100 font-sans selection:bg-amber-500/20 selection:text-amber-200">
-      {/* Top Banner Notice (Switch to Brand Studio & Quick Actions) */}
-      <div className="bg-neutral-950/90 border-b border-neutral-850 px-4 py-2 text-xs flex flex-wrap items-center justify-between gap-2">
+      {/* Top Banner Notice */}
+      <div className="bg-neutral-950/90 border-b border-neutral-850 px-4 py-2 text-xs flex items-center">
         <div className="flex items-center gap-2 text-neutral-400">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="font-mono text-[11px] text-neutral-300">
@@ -74,6 +71,7 @@ export const PublicLectureLandingPage: React.FC<PublicLectureLandingPageProps> =
           </span>
         </div>
 
+        {/*
         <div className="flex items-center gap-3">
           {onNavigateToStudio && (
             <button
@@ -92,10 +90,12 @@ export const PublicLectureLandingPage: React.FC<PublicLectureLandingPageProps> =
             <span>Abrir Tela do Ensaio / Apresentação</span>
           </button>
         </div>
+        */}
       </div>
 
-      {/* Main Public Header matching Image 2 */}
-      <header className="sticky top-0 z-40 bg-[#080D14]/95 backdrop-blur-md border-b border-neutral-800/80">
+      {/* O Header global do App Router jÃ¡ Ã© renderizado pelo layout. */}
+      {false && (
+      <header className="hidden">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-18 sm:h-20 flex items-center justify-between">
           {/* Logo Oficial EcoSeg */}
           <a href="/palestra/protecao-familia-militar" className="flex items-center shrink-0">
@@ -153,6 +153,7 @@ export const PublicLectureLandingPage: React.FC<PublicLectureLandingPageProps> =
           </div>
         </div>
       </header>
+      )}
 
       {/* Hero Section matching Image 2 */}
       <section id="palestra" className="relative py-16 md:py-28 px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1600px] mx-auto overflow-hidden">
