@@ -11,7 +11,6 @@ export function PublicLectureLandingClient() {
   return (
     <PublicLectureLandingPage
       onOpenPresentation={() => router.push(PRESENTATION_PATH)}
-      onNavigateToStudio={() => router.push("/consultor/cyborg")}
     />
   );
 }
